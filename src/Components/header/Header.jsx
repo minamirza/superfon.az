@@ -1,9 +1,14 @@
-import React from 'react'
+import React from "react";
+import HeaderTop from "./HeaderTop";
+import HeaderBottom from "./HeaderBottom";
 
 function Header() {
   return (
-    <div>Header</div>
-  )
+    <>
+      <HeaderTop />
+      <HeaderBottom />
+    </>
+  );
 }
 
-export default Header
+export default Header;
