@@ -1,9 +1,12 @@
-import React from 'react'
+import React from "react";
+import Header from "../header/Header";
 
 function Main() {
   return (
-    <div>Main</div>
-  )
+    <>
+      <Header />
+    </>
+  );
 }
 
-export default Main
+export default Main;

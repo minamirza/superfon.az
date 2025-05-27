@@ -9,7 +9,7 @@ function HeaderBottom() {
       <div className="logo">
         <img src={logo} alt="Logo" className="logo" />
       </div>
-      <button className="catalog-btn">☰ Kataloq</button>
+      <button type="button" className="w-35 h-11 text-base font-semibold rounded bg-purple-900 text-white">Kataloq</button>
       <input type="text" className="search" placeholder="Axtar..." />
       <div className="icons">
         <span>⚖️</span>
