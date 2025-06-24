@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { Routes, Route } from "react-router-dom";
 import "./App.css";
-import Main from "./Components/main/Main";
-import Error from "./Components/main/Error";
+import Main from "./Components/pages/Main";
+import Error from "./Components/pages/Error";
 import Header from "./Components/header/Header";
 import Footer from "./Components/footer/Footer";
 
