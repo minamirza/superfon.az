@@ -32,7 +32,7 @@ const menuItems = [
 export default function Sidebar() {
   const [activeIndex, setActiveIndex] = useState(null);
 
-  return (
+  return ( 
       <div className="flex h-[500px]">
         {/* Sidebar */}
         <div className="w-[350px] bg-white border rounded-2xl border-gray-300 flex flex-col">
@@ -41,7 +41,7 @@ export default function Sidebar() {
               key={index}
               onMouseEnter={() => setActiveIndex(index)}
               onMouseLeave={() => setActiveIndex(null)}
-              className="relative cursor-pointer px-4 py-3 hover:bg-gray-200 flex items-center justify-between"
+              className="relative cursor-pointer px-4 py-3 h-10 hover:bg-gray-200 flex items-center justify-between"
             >
               <span className="text-gray-900 font-semibold">{item.title}</span>
               <ChevronRightIcon className="w-5 h-5 text-gray-400" />
@@ -61,7 +61,7 @@ export default function Sidebar() {
                 <a
                   key={i}
                   href={subitem.href}
-                  className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
+                  className="block px-4 py-2 h-10 text-gray-700 hover:bg-gray-100"
                 >
                   {subitem.title}
                 </a>
