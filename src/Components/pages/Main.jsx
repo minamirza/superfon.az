@@ -1,35 +1,26 @@
-import { Routes, Route } from 'react-router-dom';
-import Header from '../header/Header';
-import Sidebar from '../layout/Sidebar';
-import Slider from '../ui/Slider';
-import Footer from '../footer/Footer';
+import ProductSlider from "../../cards/ProductSlider";
+import EasyOrder from "../delivery/EasyOrder";
+import Sidebar from "../layout/Sidebar";
+import Slider from "../ui/Slider";
+import products from "../../data/products";
+
 
 function Main() {
   return (
-    <div className="container mx-auto px-4">
-      <Header />
-      <Routes>
-        <Route
-          path="/"
-          element={
-            <>
-              <div className="flex flex-row">
-                <Sidebar />
-                <Slider />
-              </div>
-              <div>
-                <EasyOrder />
-                <FastDelivery />
-                <Extradite />
-              </div>
-            </>
-          }
-        />
-        <Route path="/slider" element={<Slider />} />
-        <Route path="/sidebar" element={<Sidebar />} />
-      </Routes>
-      <Footer />
-    </div>
+    <>
+      <div className="flex flex-row">
+        <Sidebar />
+        <Slider />
+      </div>
+      <div>
+        <EasyOrder />
+      </div>
+      <div>
+        <ProductSlider title="Yeniliklər" products={products} />
+        <ProductSlider title="Endirimlər" products={products} />
+        <ProductSlider title="Populyar Məhsullar" products={products} />
+      </div>
+    </>
   );
 }
 
