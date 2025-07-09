@@ -20,6 +20,9 @@ function Main() {
         <ProductSlider title="Endirimlər" products={products} />
         <ProductSlider title="Populyar Məhsullar" products={products} />
       </div>
+      <div>
+        {/* brand */}
+      </div>
     </>
   );
 }

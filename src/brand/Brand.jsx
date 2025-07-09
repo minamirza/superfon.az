@@ -1,6 +1,5 @@
 // cards/ProductSlider.jsx
 import { useState, useEffect } from "react";
-import { FaShoppingCart } from "react-icons/fa";
 
 export default function ProductSlider({ title, products }) {
   const [startIndex, setStartIndex] = useState(0);
@@ -32,18 +31,7 @@ export default function ProductSlider({ title, products }) {
                 className="w-54 h-56 object-contain mb-4"
               />
               <h3 className="text-center font-semibold mb-2">{title}</h3>
-              <div className="relative w-full text-center mb-4">
-                <span className="text-gray-500 line-through">{price} ₼</span>
-                <span className="block font-bold text-lg text-gray-800 mt-1">
-                  {discountPrice} ₼
-                </span>
-                <span className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-2 bg-green-600 text-white text-xs px-2 rounded">
-                  Endirimli
-                </span>
-              </div>
-              <button className="ml-auto bg-green-600 p-2 rounded text-white hover:bg-green-700">
-                <FaShoppingCart />
-              </button>
+                  </div>
             </div>
           ))}
         </div>
