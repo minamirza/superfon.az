@@ -1,74 +1,97 @@
 import { useState } from "react";
+import {
+  FaMobileAlt,
+  FaClock,
+  FaCar,
+  FaTv,
+  FaPlug,
+  FaSmoking,
+} from "react-icons/fa";
 import { ChevronRightIcon } from "@heroicons/react/20/solid";
+import { FaDesktop } from "react-icons/fa6";
 
 const menuItems = [
   {
-    title: "Options",
-    submenu: [
-      { title: "Edit", href: "#" },
-      { title: "Duplicate", href: "#" },
-    ],
+    name: "Telefon və planşetlər",
+    icon: <FaMobileAlt />,
+    submenu: ["Smartfonlar", "Düyməli telefonlar", "Planşetlər"],
   },
   {
-    title: "More",
-    submenu: [
-      { title: "Archive", href: "#" },
-      { title: "Move", href: "#" },
-    ],
+    name: "Mobil Aksesuarlar",
+    icon: <FaPlug />,
   },
   {
-    title: "Share",
-    submenu: [
-      { title: "Share", href: "#" },
-      { title: "Add to favorites", href: "#" },
-    ],
+    name: "Saatlar",
+    icon: <FaClock />,
   },
   {
-    title: "Delete",
-    submenu: [{ title: "Delete", href: "#" }],
+    name: "Avtomobil aksesuarları",
+    icon: <FaCar />,
+  },
+  {
+    name: "Audio və TV aksesuarlar",
+    icon: <FaTv />,
+  },
+  {
+    name: "Kompüter Aksesuarları",
+    icon: <FaDesktop />,
+  },
+  {
+    name: "Kiçik məişət texnikası",
+    icon: <FaPlug />,
+  },
+  {
+    name: "Elektron vape",
+    icon: <FaSmoking />,
   },
 ];
 
 export default function Sidebar() {
   const [activeIndex, setActiveIndex] = useState(null);
 
-  return ( 
-      <div className="flex h-[500px]">
-        {/* Sidebar */}
-        <div className="w-[350px] bg-white border rounded-2xl border-gray-300 flex flex-col">
-          {menuItems.map((item, index) => (
-            <div
-              key={index}
-              onMouseEnter={() => setActiveIndex(index)}
-              onMouseLeave={() => setActiveIndex(null)}
-              className="relative cursor-pointer px-4 py-3 h-10 hover:bg-gray-200 flex items-center justify-between"
-            >
-              <span className="text-gray-900 font-semibold">{item.title}</span>
-              <ChevronRightIcon className="w-5 h-5 text-gray-400" />
-            </div>
-          ))}
-        </div>
+  return (
+    <div className="flex h-[500px] w-">
+      {/* Sol sidebar */}
+      <div className="w-[300px] bg-white border rounded-xl border-gray-300 shadow-md flex flex-col justify-around pl-5">
+        {menuItems.map((item, index) => (
+          <div
+            key={item.name}
+            onMouseEnter={() => setActiveIndex(index)}
+            onMouseLeave={() => setActiveIndex(null)}
+            className={`relative px-4 py-3 h-30 cursor-pointer flex items-center gap-3 ${
+              activeIndex === index ? "bg-slate-900 text-white" : "hover:bg-gray-100"
+            }`}
+          >
+            <span className="text-lg">{item.icon}</span>
+            <span className="text-sm font-medium">{item.name}</span>
+            {item.submenu && <ChevronRightIcon className="w-4 h-4 ml-auto" />}
+          </div>
+        ))}
 
-        {/* Dropdown submenu */}
-        <div className="relative">
-          {activeIndex !== null && (
-            <div
-              onMouseEnter={() => setActiveIndex(activeIndex)}
-              onMouseLeave={() => setActiveIndex(null)}
-              className="absolute top-0 left-0 ml-48 w-48 bg-white border border-gray-300 shadow-lg rounded-md"
-            >
-              {menuItems[activeIndex].submenu.map((subitem, i) => (
-                <a
-                  key={i}
-                  href={subitem.href}
-                  className="block px-4 py-2 h-10 text-gray-700 hover:bg-gray-100"
-                >
-                  {subitem.title}
-                </a>
-              ))}
-            </div>
-          )}
-        </div>
+        <button className="w-full text-sm text-blue-600 mt-4 py-2 hover:underline">
+          Daha çox göstər
+        </button>
       </div>
+
+      {/* Sağ tərəf (submenu) */}
+      <div className="relative">
+        {activeIndex !== null && menuItems[activeIndex].submenu && (
+          <div
+            onMouseEnter={() => setActiveIndex(activeIndex)}
+            onMouseLeave={() => setActiveIndex(null)}
+            className="absolute top-0 left-0 ml-[300px] w-52 h-26 flex flex-col justify-around bg-white border border-gray-300 shadow-lg rounded-md p-2 space-y-1"
+          >
+            {menuItems[activeIndex].submenu.map((sub, i) => (
+              <div
+                key={i}
+                className="px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded cursor-pointer"
+              >
+                {sub}
+              </div>
+            ))}
+          </div>
+        )}
+      </div>
+    </div>
   );
 }
