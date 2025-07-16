@@ -12,9 +12,9 @@ function Slider() {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex(prev => (prev + 1) % slides.length);
-    }, 10000); // 10 saniyə
+    }, 10000); 
 
-    return () => clearInterval(interval); // component unmountda intervali təmizlə
+    return () => clearInterval(interval); 
   }, [slides.length]);
 
   return (

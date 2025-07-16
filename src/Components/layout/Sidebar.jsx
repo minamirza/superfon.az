@@ -19,6 +19,8 @@ const menuItems = [
   {
     name: "Mobil Aksesuarlar",
     icon: <FaPlug />,
+        submenu: ["Smartfonlar", "Düyməli telefonlar", "Planşetlər"],
+
   },
   {
     name: "Saatlar",
@@ -50,9 +52,9 @@ export default function Sidebar() {
   const [activeIndex, setActiveIndex] = useState(null);
 
   return (
-    <div className="flex h-[500px] w-">
+    <div className="flex h-[450px]">
       {/* Sol sidebar */}
-      <div className="w-[300px] bg-white border rounded-xl border-gray-300 shadow-md flex flex-col justify-around pl-5">
+      <div className="w-[300px] bg-white border rounded-xl border-gray-300 shadow-md flex flex-col justify-around p-5">
         {menuItems.map((item, index) => (
           <div
             key={item.name}

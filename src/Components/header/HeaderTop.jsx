@@ -7,7 +7,7 @@ import { MdPerson } from "react-icons/md";
 function HeaderTop() {
   return (
     <header className="p-4 dark:bg-gray-100 dark:text-gray-800">
-      <div className="container flex justify-between h-16 mx-auto">
+      <div className="container flex justify-between h-16 mx-auto items-center">
         <ul className="flex gap-5 items-stretch hidden space-x-3 lg:flex">
           <Link to="/magazalar">Mağazalarımız</Link>
           <Link to="/korporativ">Korporativ satış</Link>

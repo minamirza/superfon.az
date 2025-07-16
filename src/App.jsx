@@ -5,7 +5,7 @@ import Error from "./Components/pages/Error";
 import Header from "./Components/header/Header";
 import Footer from "./Components/footer/Footer";
 import EasyOrder from "./Components/delivery/EasyOrder";
-import BasketPage from "./basket/BasketPage"; 
+import BasketPage from "./basket/BasketPage";
 import { Toaster } from "react-hot-toast";
 import { BasketProvider } from "./contexts/BasketContext";
 

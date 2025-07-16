@@ -24,24 +24,29 @@ export default function ProductSlider({ title, products }) {
           {visibleProducts.map(({ id, title, img, price, discountPrice }) => (
             <div
               key={id}
-              className="flex-shrink-0 w-60 border rounded p-4 flex flex-col items-center shadow hover:shadow-lg transition"
+              className="flex-shrink-0 w-60 border rounded p-4 flex flex-col items-center shadow hover:shadow-lg transition space-y-2"
             >
               <img
                 src={img}
                 alt={title}
                 className="w-54 h-56 object-contain mb-4"
               />
-              <h3 className="text-center font-semibold mb-2">{title}</h3>
-              <div className="relative w-full text-center mb-4">
-                <span className="text-gray-500 line-through">{price} ₼</span>
-                <span className="block font-bold text-lg text-gray-800 mt-1">
+
+              <h3 className="text-center font-semibold mb-4">{title}</h3>
+
+              <div className="relative w-full text-center mb-3">
+                <span className="text-gray-500 line-through block mb-1">
+                  {price} ₼
+                </span>
+                <span className="block font-bold text-lg text-gray-800">
                   {discountPrice} ₼
                 </span>
-                <span className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-2 bg-green-600 text-white text-xs px-2 rounded">
+                <span className="bg-purple-900 text-white text-xs px-2 py-1 rounded mb-2 inline-block">
                   Endirimli
                 </span>
               </div>
-              <button className="ml-auto bg-green-600 p-2 rounded text-white hover:bg-green-700">
+
+              <button className="h-8 w-8 rounded flex justify-center items-center text-white bg-purple-900 hover:bg-purple-950 mt-2">
                 <FaShoppingCart />
               </button>
             </div>
