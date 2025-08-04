@@ -10,17 +10,17 @@ import {
 import { ChevronRightIcon } from "@heroicons/react/20/solid";
 import { FaDesktop } from "react-icons/fa6";
 
+
 const menuItems = [
   {
-    name: "Telefon və planşetlər",
+    name: "Telefon ve planşetler",
     icon: <FaMobileAlt />,
-    submenu: ["Smartfonlar", "Düyməli telefonlar", "Planşetlər"],
+    submenu: ["Smartfonlar", "Düymeli telefonlar", "Planşetler"],
   },
   {
     name: "Mobil Aksesuarlar",
     icon: <FaPlug />,
-        submenu: ["Smartfonlar", "Düyməli telefonlar", "Planşetlər"],
-
+    submenu: ["Smartfonlar", "Düymeli telefonlar", "Planşetler"],
   },
   {
     name: "Saatlar",
@@ -31,15 +31,15 @@ const menuItems = [
     icon: <FaCar />,
   },
   {
-    name: "Audio və TV aksesuarlar",
+    name: "Audio ve TV aksesuarlar",
     icon: <FaTv />,
   },
   {
-    name: "Kompüter Aksesuarları",
+    name: "Komputer Aksesuarları",
     icon: <FaDesktop />,
   },
   {
-    name: "Kiçik məişət texnikası",
+    name: "Kiçik meişet teknikası",
     icon: <FaPlug />,
   },
   {
@@ -53,7 +53,7 @@ export default function Sidebar() {
 
   return (
     <div className="flex h-[450px]">
-      {/* Sol sidebar */}
+      {/* Left sidebar */}
       <div className="w-[300px] bg-white border rounded-xl border-gray-300 shadow-md flex flex-col justify-around p-5">
         {menuItems.map((item, index) => (
           <div
@@ -71,11 +71,11 @@ export default function Sidebar() {
         ))}
 
         <button className="w-full text-sm text-blue-600 mt-4 py-2 hover:underline">
-          Daha çox göstər
+          Daha çox göster
         </button>
       </div>
 
-      {/* Sağ tərəf (submenu) */}
+      {/* Right side (submenu) */}
       <div className="relative">
         {activeIndex !== null && menuItems[activeIndex].submenu && (
           <div

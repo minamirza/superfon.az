@@ -13,12 +13,17 @@ function HeaderTop() {
           <Link to="/korporativ">Korporativ satış</Link>
         </ul>
         <div className="flex flex-row items-center md:space-x-4">
-          <div className="relative flex flex-row">
+          <div className="relative flex flex-row gap-5">
             <Link to="/kampaniyalar">
-              <button className="campaign-btn">Kampaniyalar</button>
+              <button
+                type="button"
+                class="w-28 h-9 text-base font-semibold rounded text-purple-900 hover:text-white border border-purple-900 hover:bg-purple-900 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2 dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:hover:bg-blue-500 dark:focus:ring-blue-800"
+              >
+                Kampaniyalar
+              </button>{""}
             </Link>
             <span className="flex items-center gap-2 text-sm text-gray-700">
-              <FaPhoneAlt size={24} />
+              <FaPhoneAlt size={20} />
               +994 51 205 88 88
             </span>
             <span className="flex items-center gap-2 text-sm text-gray-700">
@@ -28,11 +33,14 @@ function HeaderTop() {
               </select>
             </span>
             <span className="flex items-center gap-2 text-sm text-gray-700">
-              <Link to="/hesab" className="account flex flex-row items-center gap-2">
-                <MdPerson size={26} /> 
-                <div>
-                <p className="text-[#C1C1C1]">Daxil ol</p>
-                <p className="text-[#0a0a47]">Hesab</p>
+              <Link
+                to="/hesab"
+                className="account flex flex-row items-center gap-2"
+              >
+                <MdPerson size={26} />
+                <div className="flex flex-col">
+                  <p className="text-[#C1C1C1]">Daxil ol</p>
+                  <p className="text-[#0a0a47]">Hesab</p>
                 </div>
               </Link>
             </span>

@@ -1,0 +1,938 @@
+{
+  "categories": [
+    {
+      "id": 1,
+      "name": "Telefon ve planşetler"
+    },
+    {
+      "id": 2,
+      "name": "Mobil Aksesuarlar"
+    },
+    {
+      "id": 3,
+      "name": "Saatlar"
+    },
+    {
+      "id": 4,
+      "name": "Avtomobil aksesuarları"
+    },
+    {
+      "id": 5,
+      "name": "Audio ve TV aksesuarlar"
+    },
+    {
+      "id": 6,
+      "name": "Komputer Aksesuarları"
+    },
+    {
+      "id": 7,
+      "name": "Kiçik meişet teknikası"
+    },
+    {
+      "id": 8,
+      "name": "Elektron vape"
+    }
+  ],
+  "products": [
+    {
+      "id": 1,
+      "title": "Anker Plus 993",
+      "price": 2121.4,
+      "stock": 18,
+      "categoryId": 2,
+      "image": "/images/anker.png",
+      "description": "Anker məhsulu. Yüksək keyfiyyət və funksionallıq."
+    },
+    {
+      "id": 2,
+      "title": "Tefal Mini 152",
+      "price": 1129.39,
+      "stock": 49,
+      "categoryId": 7,
+      "image": "/images/tefal.png",
+      "description": "Tefal məhsulu. Yüksək keyfiyyət və funksionallıq."
+    },
+    {
+      "id": 3,
+      "title": "Tefal Ultra 90",
+      "price": 1897.58,
+      "stock": 76,
+      "categoryId": 7,
+      "image": "/images/tefal.png",
+      "description": "Tefal məhsulu. Yüksək keyfiyyət və funksionallıq."
+    },
+    {
+      "id": 4,
+      "title": "Casio Go 154",
+      "price": 1875.71,
+      "stock": 80,
+      "categoryId": 3,
+      "image": "/images/casio.png",
+      "description": "Casio məhsulu. Yüksək keyfiyyət və funksionallıq."
+    },
+    {
+      "id": 5,
+      "title": "Xiaomi Go 745",
+      "price": 1637.58,
+      "stock": 69,
+      "categoryId": 1,
+      "image": "/images/xiaomi.png",
+      "description": "Xiaomi məhsulu. Yüksək keyfiyyət və funksionallıq."
+    },
+    {
+      "id": 6,
+      "title": "Casio Edge 816",
+      "price": 2414.12,
+      "stock": 35,
+      "categoryId": 3,
+      "image": "/images/casio.png",
+      "description": "Casio məhsulu. Yüksək keyfiyyət və funksionallıq."
+    },
+    {
+      "id": 7,
+      "title": "Philips Ultra 427",
+      "price": 613.55,
+      "stock": 30,
+      "categoryId": 5,
+      "image": "/images/philips.png",
+      "description": "Philips məhsulu. Yüksək keyfiyyət və funksionallıq."
+    },
+    {
+      "id": 8,
+      "title": "Xiaomi Lite 10",
+      "price": 2407.06,
+      "stock": 61,
+      "categoryId": 1,
+      "image": "/images/xiaomi.png",
+      "description": "Xiaomi məhsulu. Yüksək keyfiyyət və funksionallıq."
+    },
+    {
+      "id": 9,
+      "title": "Xiaomi Max 349",
+      "price": 1823.47,
+      "stock": 67,
+      "categoryId": 4,
+      "image": "/images/xiaomi.png",
+      "description": "Xiaomi məhsulu. Yüksək keyfiyyət və funksionallıq."
+    },
+    {
+      "id": 10,
+      "title": "Xiaomi Edge 311",
+      "price": 189.62,
+      "stock": 10,
+      "categoryId": 3,
+      "image": "/images/xiaomi.png",
+      "description": "Xiaomi məhsulu. Yüksək keyfiyyət və funksionallıq."
+    },
+    {
+      "id": 11,
+      "title": "Samsung Lite 668",
+      "price": 2407.97,
+      "stock": 30,
+      "categoryId": 5,
+      "image": "/images/samsung.png",
+      "description": "Samsung məhsulu. Yüksək keyfiyyət və funksionallıq."
+    },
+    {
+      "id": 12,
+      "title": "Remax Max 295",
+      "price": 2242.0,
+      "stock": 25,
+      "categoryId": 4,
+      "image": "/images/remax.png",
+      "description": "Remax məhsulu. Yüksək keyfiyyət və funksionallıq."
+    },
+    {
+      "id": 13,
+      "title": "Xiaomi Plus 192",
+      "price": 515.24,
+      "stock": 56,
+      "categoryId": 4,
+      "image": "/images/xiaomi.png",
+      "description": "Xiaomi məhsulu. Yüksək keyfiyyət və funksionallıq."
+    },
+    {
+      "id": 14,
+      "title": "Philips Mini 753",
+      "price": 1628.01,
+      "stock": 36,
+      "categoryId": 7,
+      "image": "/images/philips.png",
+      "description": "Philips məhsulu. Yüksək keyfiyyət və funksionallıq."
+    },
+    {
+      "id": 15,
+      "title": "Sony Air 733",
+      "price": 758.06,
+      "stock": 9,
+      "categoryId": 5,
+      "image": "/images/sony.png",
+      "description": "Sony məhsulu. Yüksək keyfiyyət və funksionallıq."
+    },
+    {
+      "id": 16,
+      "title": "Elf Bar Air 528",
+      "price": 2069.85,
+      "stock": 25,
+      "categoryId": 8,
+      "image": "/images/elfbar.png",
+      "description": "Elf Bar məhsulu. Yüksək keyfiyyət və funksionallıq."
+    },
+    {
+      "id": 17,
+      "title": "Apple Ultra 640",
+      "price": 2428.8,
+      "stock": 71,
+      "categoryId": 1,
+      "image": "/images/apple.png",
+      "description": "Apple məhsulu. Yüksək keyfiyyət və funksionallıq."
+    },
+    {
+      "id": 18,
+      "title": "MSI Mini 793",
+      "price": 1989.83,
+      "stock": 87,
+      "categoryId": 6,
+      "image": "/images/msi.png",
+      "description": "MSI məhsulu. Yüksək keyfiyyət və funksionallıq."
+    },
+    {
+      "id": 19,
+      "title": "Samsung Pro 974",
+      "price": 1589.36,
+      "stock": 62,
+      "categoryId": 1,
+      "image": "/images/samsung.png",
+      "description": "Samsung məhsulu. Yüksək keyfiyyət və funksionallıq."
+    },
+    {
+      "id": 20,
+      "title": "Bosch Go 888",
+      "price": 684.62,
+      "stock": 60,
+      "categoryId": 7,
+      "image": "/images/bosch.png",
+      "description": "Bosch məhsulu. Yüksək keyfiyyət və funksionallıq."
+    },
+    {
+      "id": 21,
+      "title": "Baseus Air 563",
+      "price": 752.39,
+      "stock": 23,
+      "categoryId": 4,
+      "image": "/images/baseus.png",
+      "description": "Baseus məhsulu. Yüksək keyfiyyət və funksionallıq."
+    },
+    {
+      "id": 22,
+      "title": "LG Lite 370",
+      "price": 1316.35,
+      "stock": 73,
+      "categoryId": 5,
+      "image": "/images/lg.png",
+      "description": "LG məhsulu. Yüksək keyfiyyət və funksionallıq."
+    },
+    {
+      "id": 23,
+      "title": "Samsung Max 707",
+      "price": 1086.71,
+      "stock": 25,
+      "categoryId": 2,
+      "image": "/images/samsung.png",
+      "description": "Samsung məhsulu. Yüksək keyfiyyət və funksionallıq."
+    },
+    {
+      "id": 24,
+      "title": "Remax Lite 110",
+      "price": 103.67,
+      "stock": 28,
+      "categoryId": 4,
+      "image": "/images/remax.png",
+      "description": "Remax məhsulu. Yüksək keyfiyyət və funksionallıq."
+    },
+    {
+      "id": 25,
+      "title": "Geek Bar Go 676",
+      "price": 2013.17,
+      "stock": 85,
+      "categoryId": 8,
+      "image": "/images/geekbar.png",
+      "description": "Geek Bar məhsulu. Yüksək keyfiyyət və funksionallıq."
+    },
+    {
+      "id": 26,
+      "title": "LG Max 68",
+      "price": 509.88,
+      "stock": 33,
+      "categoryId": 5,
+      "image": "/images/lg.png",
+      "description": "LG məhsulu. Yüksək keyfiyyət və funksionallıq."
+    },
+    {
+      "id": 27,
+      "title": "Sony Air 59",
+      "price": 1003.27,
+      "stock": 48,
+      "categoryId": 5,
+      "image": "/images/sony.png",
+      "description": "Sony məhsulu. Yüksək keyfiyyət və funksionallıq."
+    },
+    {
+      "id": 28,
+      "title": "Philips Ultra 756",
+      "price": 653.12,
+      "stock": 53,
+      "categoryId": 5,
+      "image": "/images/philips.png",
+      "description": "Philips məhsulu. Yüksək keyfiyyət və funksionallıq."
+    },
+    {
+      "id": 29,
+      "title": "VOOPOO Plus 332",
+      "price": 212.86,
+      "stock": 8,
+      "categoryId": 8,
+      "image": "/images/voopoo.png",
+      "description": "VOOPOO məhsulu. Yüksək keyfiyyət və funksionallıq."
+    },
+    {
+      "id": 30,
+      "title": "LG Plus 960",
+      "price": 394.54,
+      "stock": 19,
+      "categoryId": 5,
+      "image": "/images/lg.png",
+      "description": "LG məhsulu. Yüksək keyfiyyət və funksionallıq."
+    },
+    {
+      "id": 31,
+      "title": "Apple Plus 582",
+      "price": 1687.3,
+      "stock": 97,
+      "categoryId": 2,
+      "image": "/images/apple.png",
+      "description": "Apple məhsulu. Yüksək keyfiyyət və funksionallıq."
+    },
+    {
+      "id": 32,
+      "title": "Samsung Lite 96",
+      "price": 2393.32,
+      "stock": 74,
+      "categoryId": 3,
+      "image": "/images/samsung.png",
+      "description": "Samsung məhsulu. Yüksək keyfiyyət və funksionallıq."
+    },
+    {
+      "id": 33,
+      "title": "Xiaomi Lite 440",
+      "price": 2011.02,
+      "stock": 63,
+      "categoryId": 7,
+      "image": "/images/xiaomi.png",
+      "description": "Xiaomi məhsulu. Yüksək keyfiyyət və funksionallıq."
+    },
+    {
+      "id": 34,
+      "title": "Tefal Pro 418",
+      "price": 1793.27,
+      "stock": 10,
+      "categoryId": 7,
+      "image": "/images/tefal.png",
+      "description": "Tefal məhsulu. Yüksək keyfiyyət və funksionallıq."
+    },
+    {
+      "id": 35,
+      "title": "HP Plus 681",
+      "price": 1820.08,
+      "stock": 51,
+      "categoryId": 6,
+      "image": "/images/hp.png",
+      "description": "HP məhsulu. Yüksək keyfiyyət və funksionallıq."
+    },
+    {
+      "id": 36,
+      "title": "Baseus Neo 289",
+      "price": 2311.38,
+      "stock": 59,
+      "categoryId": 2,
+      "image": "/images/baseus.png",
+      "description": "Baseus məhsulu. Yüksək keyfiyyət və funksionallıq."
+    },
+    {
+      "id": 37,
+      "title": "Philips Pro 173",
+      "price": 2396.14,
+      "stock": 45,
+      "categoryId": 5,
+      "image": "/images/philips.png",
+      "description": "Philips məhsulu. Yüksək keyfiyyət və funksionallıq."
+    },
+    {
+      "id": 38,
+      "title": "Samsung Lite 360",
+      "price": 2231.38,
+      "stock": 93,
+      "categoryId": 3,
+      "image": "/images/samsung.png",
+      "description": "Samsung məhsulu. Yüksək keyfiyyət və funksionallıq."
+    },
+    {
+      "id": 39,
+      "title": "Razer Edge 163",
+      "price": 1169.21,
+      "stock": 21,
+      "categoryId": 6,
+      "image": "/images/razer.png",
+      "description": "Razer məhsulu. Yüksək keyfiyyət və funksionallıq."
+    },
+    {
+      "id": 40,
+      "title": "Xiaomi Pro 737",
+      "price": 52.65,
+      "stock": 54,
+      "categoryId": 3,
+      "image": "/images/xiaomi.png",
+      "description": "Xiaomi məhsulu. Yüksək keyfiyyət və funksionallıq."
+    },
+    {
+      "id": 41,
+      "title": "Baseus Mini 20",
+      "price": 1663.13,
+      "stock": 49,
+      "categoryId": 2,
+      "image": "/images/baseus.png",
+      "description": "Baseus məhsulu. Yüksək keyfiyyət və funksionallıq."
+    },
+    {
+      "id": 42,
+      "title": "SMOK Air 589",
+      "price": 1562.31,
+      "stock": 40,
+      "categoryId": 8,
+      "image": "/images/smok.png",
+      "description": "SMOK məhsulu. Yüksək keyfiyyət və funksionallıq."
+    },
+    {
+      "id": 43,
+      "title": "VOOPOO Pro 383",
+      "price": 1029.21,
+      "stock": 89,
+      "categoryId": 8,
+      "image": "/images/voopoo.png",
+      "description": "VOOPOO məhsulu. Yüksək keyfiyyət və funksionallıq."
+    },
+    {
+      "id": 44,
+      "title": "MSI Neo 989",
+      "price": 925.72,
+      "stock": 98,
+      "categoryId": 6,
+      "image": "/images/msi.png",
+      "description": "MSI məhsulu. Yüksək keyfiyyət və funksionallıq."
+    },
+    {
+      "id": 45,
+      "title": "Xiaomi Ultra 953",
+      "price": 1243.87,
+      "stock": 99,
+      "categoryId": 1,
+      "image": "/images/xiaomi.png",
+      "description": "Xiaomi məhsulu. Yüksək keyfiyyət və funksionallıq."
+    },
+    {
+      "id": 46,
+      "title": "Xiaomi Lite 537",
+      "price": 614.73,
+      "stock": 87,
+      "categoryId": 4,
+      "image": "/images/xiaomi.png",
+      "description": "Xiaomi məhsulu. Yüksək keyfiyyət və funksionallıq."
+    },
+    {
+      "id": 47,
+      "title": "Razer Lite 25",
+      "price": 953.75,
+      "stock": 60,
+      "categoryId": 6,
+      "image": "/images/razer.png",
+      "description": "Razer məhsulu. Yüksək keyfiyyət və funksionallıq."
+    },
+    {
+      "id": 48,
+      "title": "Xiaomi Edge 943",
+      "price": 2372.95,
+      "stock": 64,
+      "categoryId": 7,
+      "image": "/images/xiaomi.png",
+      "description": "Xiaomi məhsulu. Yüksək keyfiyyət və funksionallıq."
+    },
+    {
+      "id": 49,
+      "title": "VOOPOO Pro 545",
+      "price": 1755.81,
+      "stock": 86,
+      "categoryId": 8,
+      "image": "/images/voopoo.png",
+      "description": "VOOPOO məhsulu. Yüksək keyfiyyət və funksionallıq."
+    },
+    {
+      "id": 50,
+      "title": "Xiaomi Go 491",
+      "price": 1564.88,
+      "stock": 95,
+      "categoryId": 1,
+      "image": "/images/xiaomi.png",
+      "description": "Xiaomi məhsulu. Yüksək keyfiyyət və funksionallıq."
+    },
+    {
+      "id": 51,
+      "title": "HP Pro 502",
+      "price": 1092.16,
+      "stock": 55,
+      "categoryId": 6,
+      "image": "/images/hp.png",
+      "description": "HP məhsulu. Yüksək keyfiyyət və funksionallıq."
+    },
+    {
+      "id": 52,
+      "title": "HP Go 440",
+      "price": 757.56,
+      "stock": 59,
+      "categoryId": 6,
+      "image": "/images/hp.png",
+      "description": "HP məhsulu. Yüksək keyfiyyət və funksionallıq."
+    },
+    {
+      "id": 53,
+      "title": "Xiaomi Neo 837",
+      "price": 1093.34,
+      "stock": 70,
+      "categoryId": 4,
+      "image": "/images/xiaomi.png",
+      "description": "Xiaomi məhsulu. Yüksək keyfiyyət və funksionallıq."
+    },
+    {
+      "id": 54,
+      "title": "Anker Neo 904",
+      "price": 2151.61,
+      "stock": 77,
+      "categoryId": 2,
+      "image": "/images/anker.png",
+      "description": "Anker məhsulu. Yüksək keyfiyyət və funksionallıq."
+    },
+    {
+      "id": 55,
+      "title": "Baseus Max 564",
+      "price": 1647.93,
+      "stock": 57,
+      "categoryId": 2,
+      "image": "/images/baseus.png",
+      "description": "Baseus məhsulu. Yüksək keyfiyyət və funksionallıq."
+    },
+    {
+      "id": 56,
+      "title": "Xiaomi Ultra 734",
+      "price": 318.62,
+      "stock": 97,
+      "categoryId": 4,
+      "image": "/images/xiaomi.png",
+      "description": "Xiaomi məhsulu. Yüksək keyfiyyət və funksionallıq."
+    },
+    {
+      "id": 57,
+      "title": "LG Go 313",
+      "price": 1132.98,
+      "stock": 69,
+      "categoryId": 5,
+      "image": "/images/lg.png",
+      "description": "LG məhsulu. Yüksək keyfiyyət və funksionallıq."
+    },
+    {
+      "id": 58,
+      "title": "Xiaomi Pro 1",
+      "price": 375.1,
+      "stock": 82,
+      "categoryId": 3,
+      "image": "/images/xiaomi.png",
+      "description": "Xiaomi məhsulu. Yüksək keyfiyyət və funksionallıq."
+    },
+    {
+      "id": 59,
+      "title": "Apple Ultra 47",
+      "price": 2157.6,
+      "stock": 91,
+      "categoryId": 1,
+      "image": "/images/apple.png",
+      "description": "Apple məhsulu. Yüksək keyfiyyət və funksionallıq."
+    },
+    {
+      "id": 60,
+      "title": "SMOK Plus 715",
+      "price": 754.22,
+      "stock": 35,
+      "categoryId": 8,
+      "image": "/images/smok.png",
+      "description": "SMOK məhsulu. Yüksək keyfiyyət və funksionallıq."
+    },
+    {
+      "id": 61,
+      "title": "Anker Go 135",
+      "price": 2058.18,
+      "stock": 16,
+      "categoryId": 2,
+      "image": "/images/anker.png",
+      "description": "Anker məhsulu. Yüksək keyfiyyət və funksionallıq."
+    },
+    {
+      "id": 62,
+      "title": "Huawei Mini 794",
+      "price": 518.03,
+      "stock": 12,
+      "categoryId": 1,
+      "image": "/images/huawei.png",
+      "description": "Huawei məhsulu. Yüksək keyfiyyət və funksionallıq."
+    },
+    {
+      "id": 63,
+      "title": "SMOK Lite 511",
+      "price": 352.55,
+      "stock": 57,
+      "categoryId": 8,
+      "image": "/images/smok.png",
+      "description": "SMOK məhsulu. Yüksək keyfiyyət və funksionallıq."
+    },
+    {
+      "id": 64,
+      "title": "Apple Ultra 971",
+      "price": 1952.82,
+      "stock": 29,
+      "categoryId": 3,
+      "image": "/images/apple.png",
+      "description": "Apple məhsulu. Yüksək keyfiyyət və funksionallıq."
+    },
+    {
+      "id": 65,
+      "title": "Tefal Edge 199",
+      "price": 82.22,
+      "stock": 55,
+      "categoryId": 7,
+      "image": "/images/tefal.png",
+      "description": "Tefal məhsulu. Yüksək keyfiyyət və funksionallıq."
+    },
+    {
+      "id": 66,
+      "title": "Philips Go 546",
+      "price": 1650.23,
+      "stock": 98,
+      "categoryId": 7,
+      "image": "/images/philips.png",
+      "description": "Philips məhsulu. Yüksək keyfiyyət və funksionallıq."
+    },
+    {
+      "id": 67,
+      "title": "Sony Plus 184",
+      "price": 253.47,
+      "stock": 54,
+      "categoryId": 5,
+      "image": "/images/sony.png",
+      "description": "Sony məhsulu. Yüksək keyfiyyət və funksionallıq."
+    },
+    {
+      "id": 68,
+      "title": "Baseus Edge 65",
+      "price": 1346.47,
+      "stock": 11,
+      "categoryId": 2,
+      "image": "/images/baseus.png",
+      "description": "Baseus məhsulu. Yüksək keyfiyyət və funksionallıq."
+    },
+    {
+      "id": 69,
+      "title": "Nokia Plus 788",
+      "price": 2105.03,
+      "stock": 57,
+      "categoryId": 1,
+      "image": "/images/nokia.png",
+      "description": "Nokia məhsulu. Yüksək keyfiyyət və funksionallıq."
+    },
+    {
+      "id": 70,
+      "title": "Remax Air 974",
+      "price": 2457.48,
+      "stock": 81,
+      "categoryId": 4,
+      "image": "/images/remax.png",
+      "description": "Remax məhsulu. Yüksək keyfiyyət və funksionallıq."
+    },
+    {
+      "id": 71,
+      "title": "Xiaomi Mini 583",
+      "price": 1909.5,
+      "stock": 81,
+      "categoryId": 3,
+      "image": "/images/xiaomi.png",
+      "description": "Xiaomi məhsulu. Yüksək keyfiyyət və funksionallıq."
+    },
+    {
+      "id": 72,
+      "title": "VOOPOO Ultra 931",
+      "price": 1755.11,
+      "stock": 23,
+      "categoryId": 8,
+      "image": "/images/voopoo.png",
+      "description": "VOOPOO məhsulu. Yüksək keyfiyyət və funksionallıq."
+    },
+    {
+      "id": 73,
+      "title": "Baseus Plus 513",
+      "price": 1240.86,
+      "stock": 80,
+      "categoryId": 4,
+      "image": "/images/baseus.png",
+      "description": "Baseus məhsulu. Yüksək keyfiyyət və funksionallıq."
+    },
+    {
+      "id": 74,
+      "title": "MSI Pro 68",
+      "price": 163.46,
+      "stock": 24,
+      "categoryId": 6,
+      "image": "/images/msi.png",
+      "description": "MSI məhsulu. Yüksək keyfiyyət və funksionallıq."
+    },
+    {
+      "id": 75,
+      "title": "HP Ultra 912",
+      "price": 584.69,
+      "stock": 15,
+      "categoryId": 6,
+      "image": "/images/hp.png",
+      "description": "HP məhsulu. Yüksək keyfiyyət və funksionallıq."
+    },
+    {
+      "id": 76,
+      "title": "Philips Lite 335",
+      "price": 1725.15,
+      "stock": 7,
+      "categoryId": 5,
+      "image": "/images/philips.png",
+      "description": "Philips məhsulu. Yüksək keyfiyyət və funksionallıq."
+    },
+    {
+      "id": 77,
+      "title": "Xiaomi Mini 980",
+      "price": 2092.09,
+      "stock": 77,
+      "categoryId": 1,
+      "image": "/images/xiaomi.png",
+      "description": "Xiaomi məhsulu. Yüksək keyfiyyət və funksionallıq."
+    },
+    {
+      "id": 78,
+      "title": "Elf Bar Go 579",
+      "price": 1630.38,
+      "stock": 44,
+      "categoryId": 8,
+      "image": "/images/elfbar.png",
+      "description": "Elf Bar məhsulu. Yüksək keyfiyyət və funksionallıq."
+    },
+    {
+      "id": 79,
+      "title": "Xiaomi Neo 202",
+      "price": 1980.86,
+      "stock": 25,
+      "categoryId": 4,
+      "image": "/images/xiaomi.png",
+      "description": "Xiaomi məhsulu. Yüksək keyfiyyət və funksionallıq."
+    },
+    {
+      "id": 80,
+      "title": "SMOK Go 738",
+      "price": 1936.93,
+      "stock": 34,
+      "categoryId": 8,
+      "image": "/images/smok.png",
+      "description": "SMOK məhsulu. Yüksək keyfiyyət və funksionallıq."
+    },
+    {
+      "id": 81,
+      "title": "HP Plus 240",
+      "price": 2243.61,
+      "stock": 21,
+      "categoryId": 6,
+      "image": "/images/hp.png",
+      "description": "HP məhsulu. Yüksək keyfiyyət və funksionallıq."
+    },
+    {
+      "id": 82,
+      "title": "Samsung Lite 982",
+      "price": 300.53,
+      "stock": 47,
+      "categoryId": 2,
+      "image": "/images/samsung.png",
+      "description": "Samsung məhsulu. Yüksək keyfiyyət və funksionallıq."
+    },
+    {
+      "id": 83,
+      "title": "Nokia Air 992",
+      "price": 230.71,
+      "stock": 64,
+      "categoryId": 1,
+      "image": "/images/nokia.png",
+      "description": "Nokia məhsulu. Yüksək keyfiyyət və funksionallıq."
+    },
+    {
+      "id": 84,
+      "title": "Philips Edge 310",
+      "price": 403.73,
+      "stock": 70,
+      "categoryId": 5,
+      "image": "/images/philips.png",
+      "description": "Philips məhsulu. Yüksək keyfiyyət və funksionallıq."
+    },
+    {
+      "id": 85,
+      "title": "Xiaomi Air 287",
+      "price": 1321.64,
+      "stock": 87,
+      "categoryId": 4,
+      "image": "/images/xiaomi.png",
+      "description": "Xiaomi məhsulu. Yüksək keyfiyyət və funksionallıq."
+    },
+    {
+      "id": 86,
+      "title": "Casio Ultra 34",
+      "price": 686.93,
+      "stock": 11,
+      "categoryId": 3,
+      "image": "/images/casio.png",
+      "description": "Casio məhsulu. Yüksək keyfiyyət və funksionallıq."
+    },
+    {
+      "id": 87,
+      "title": "Nokia Max 307",
+      "price": 2001.64,
+      "stock": 84,
+      "categoryId": 1,
+      "image": "/images/nokia.png",
+      "description": "Nokia məhsulu. Yüksək keyfiyyət və funksionallıq."
+    },
+    {
+      "id": 88,
+      "title": "Xiaomi Max 790",
+      "price": 1926.7,
+      "stock": 18,
+      "categoryId": 3,
+      "image": "/images/xiaomi.png",
+      "description": "Xiaomi məhsulu. Yüksək keyfiyyət və funksionallıq."
+    },
+    {
+      "id": 89,
+      "title": "Samsung Go 625",
+      "price": 137.89,
+      "stock": 88,
+      "categoryId": 3,
+      "image": "/images/samsung.png",
+      "description": "Samsung məhsulu. Yüksək keyfiyyət və funksionallıq."
+    },
+    {
+      "id": 90,
+      "title": "Remax Neo 217",
+      "price": 1351.7,
+      "stock": 93,
+      "categoryId": 4,
+      "image": "/images/remax.png",
+      "description": "Remax məhsulu. Yüksək keyfiyyət və funksionallıq."
+    },
+    {
+      "id": 91,
+      "title": "Philips Pro 715",
+      "price": 1308.25,
+      "stock": 30,
+      "categoryId": 7,
+      "image": "/images/philips.png",
+      "description": "Philips məhsulu. Yüksək keyfiyyət və funksionallıq."
+    },
+    {
+      "id": 92,
+      "title": "Xiaomi Go 85",
+      "price": 1146.53,
+      "stock": 38,
+      "categoryId": 1,
+      "image": "/images/xiaomi.png",
+      "description": "Xiaomi məhsulu. Yüksək keyfiyyət və funksionallıq."
+    },
+    {
+      "id": 93,
+      "title": "Anker Mini 647",
+      "price": 1087.16,
+      "stock": 32,
+      "categoryId": 2,
+      "image": "/images/anker.png",
+      "description": "Anker məhsulu. Yüksək keyfiyyət və funksionallıq."
+    },
+    {
+      "id": 94,
+      "title": "Apple Mini 147",
+      "price": 484.43,
+      "stock": 24,
+      "categoryId": 1,
+      "image": "/images/apple.png",
+      "description": "Apple məhsulu. Yüksək keyfiyyət və funksionallıq."
+    },
+    {
+      "id": 95,
+      "title": "SMOK Pro 591",
+      "price": 609.57,
+      "stock": 14,
+      "categoryId": 8,
+      "image": "/images/smok.png",
+      "description": "SMOK məhsulu. Yüksək keyfiyyət və funksionallıq."
+    },
+    {
+      "id": 96,
+      "title": "Casio Max 934",
+      "price": 34.58,
+      "stock": 56,
+      "categoryId": 3,
+      "image": "/images/casio.png",
+      "description": "Casio məhsulu. Yüksək keyfiyyət və funksionallıq."
+    },
+    {
+      "id": 97,
+      "title": "Xiaomi Go 432",
+      "price": 1368.89,
+      "stock": 65,
+      "categoryId": 3,
+      "image": "/images/xiaomi.png",
+      "description": "Xiaomi məhsulu. Yüksək keyfiyyət və funksionallıq."
+    },
+    {
+      "id": 98,
+      "title": "Samsung Neo 139",
+      "price": 1663.94,
+      "stock": 75,
+      "categoryId": 5,
+      "image": "/images/samsung.png",
+      "description": "Samsung məhsulu. Yüksək keyfiyyət və funksionallıq."
+    },
+    {
+      "id": 99,
+      "title": "Elf Bar Edge 740",
+      "price": 1640.17,
+      "stock": 49,  
+      "categoryId": 8,
+      "image": "/images/elfbar.png",
+      "description": "Elf Bar məhsulu. Yüksək keyfiyyət və funksionallıq."
+    },
+    {
+      "id": 100,
+      "title": "VOOPOO Edge 80",
+      "price": 1305.93,
+      "stock": 80,
+      "categoryId": 8,
+      "image": "/images/voopoo.png",
+      "description": "VOOPOO məhsulu. Yüksək keyfiyyət və funksionallıq."
+    }
+  ]
+}
