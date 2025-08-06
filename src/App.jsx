@@ -9,6 +9,7 @@ import BasketPage from "./basket/BasketPage";
 import { Toaster } from "react-hot-toast";
 import { BasketProvider } from "./contexts/BasketContext";
 import { WishlistProvider } from "./contexts/WishlistContext";
+import { LoginForm } from './login/LoginForm';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
             <Route path="/" element={<Main />} />
             <Route path="/basket" element={<BasketPage />} />
             <Route path="/payment" element={<EasyOrder />} />
+            <Route path="/login" element={<LoginForm />} />
             <Route path="*" element={<Error />} />
           </Routes>
             <Footer />

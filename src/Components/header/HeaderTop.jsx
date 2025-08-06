@@ -17,10 +17,11 @@ function HeaderTop() {
             <Link to="/kampaniyalar">
               <button
                 type="button"
-                class="w-28 h-9 text-base font-semibold rounded text-purple-900 hover:text-white border border-purple-900 hover:bg-purple-900 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2 dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:hover:bg-blue-500 dark:focus:ring-blue-800"
+                className="w-28 h-9 text-base font-semibold rounded text-purple-900 hover:text-white border border-purple-900 hover:bg-purple-900 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2 dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:hover:bg-blue-500 dark:focus:ring-blue-800"
               >
                 Kampaniyalar
-              </button>{""}
+              </button>
+              {""}
             </Link>
             <span className="flex items-center gap-2 text-sm text-gray-700">
               <FaPhoneAlt size={20} />
@@ -34,11 +35,14 @@ function HeaderTop() {
             </span>
             <span className="flex items-center gap-2 text-sm text-gray-700">
               <Link
-                to="/hesab"
+                to="/login"
                 className="account flex flex-row items-center gap-2"
               >
                 <MdPerson size={26} />
-                <div className="flex flex-col">
+                <div
+                  className="flex flex-col cursor-pointer"
+                  onClick={() => navigate("/login")}
+                >
                   <p className="text-[#C1C1C1]">Daxil ol</p>
                   <p className="text-[#0a0a47]">Hesab</p>
                 </div>

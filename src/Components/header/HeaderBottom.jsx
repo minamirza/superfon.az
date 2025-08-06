@@ -35,7 +35,7 @@ function HeaderBottom() {
 
       <button
         type="button"
-        class="w-28 h-9 text-base font-semibold rounded text-white border-purple-900 bg-purple-900 hover:bg-purple-950 focus:ring-4 focus:outline-none font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2"
+        className="w-28 h-9 text-base font-semibold rounded text-white border-purple-900 bg-purple-900 hover:bg-purple-950 focus:ring-4 focus:outline-none font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2"
       >
         Axtar
       </button>
