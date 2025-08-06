@@ -6,11 +6,11 @@ import { FaBasketShopping } from "react-icons/fa6";
 import { PiScalesFill } from "react-icons/pi";
 import { FaRegHeart } from "react-icons/fa";
 import { BasketContext } from "../../contexts/BasketContext";
-import { WishlistContext } from "../../contexts/WishlistContext"; // Wishlist kontekstini əlavə edin
+import { WishlistContext } from "../../contexts/WishlistContext"; // Wishlist 
 
 function HeaderBottom() {
   const { basket } = useContext(BasketContext);
-  const { wishlist } = useContext(WishlistContext); // Wishlist məlumatlarını alın
+  const { wishlist } = useContext(WishlistContext); // Wishlist 
 
   return (
     <div className="bottom-bar relative">
