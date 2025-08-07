@@ -6,12 +6,15 @@ function Footer() {
   return (
     <footer
       style={{
-        backgroundColor: "white",
         paddingTop: "64px",
         paddingBottom: "32px",
+        maxWidth: "1550px",
+        margin: "0 auto",
+        display: "flex",
+        justifyContent: "space-around",
       }}
     >
-      <div className="mx-auto max-w-screen-xl space-y-8 px-4 py-16 sm:px-6 lg:space-y-16 lg:px-8">
+      <div className="mx-auto space-y-8 px-4 py-16 sm:px-6 lg:space-y-16 lg:px-8">
         <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
           <div>
             <div className="logo">
@@ -20,7 +23,13 @@ function Footer() {
               </Link>
             </div>
 
-            <p className="mt-4 max-w-xs text-gray-500">
+            <p
+              className="mt-4 max-w-xs text-gray-500"
+              style={{
+                paddingTop: "64px",
+                paddingBottom: "32px",
+              }}
+            >
               Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse non
               cupiditate quae nam molestias.
             </p>
@@ -146,7 +155,7 @@ function Footer() {
 
           <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:col-span-2 lg:grid-cols-4">
             <div>
-              <p className="font-medium text-gray-900">Services</p>
+              <p className="font-medium text-gray-900">Şirkət</p>
 
               <ul className="mt-6 space-y-4 text-sm">
                 <li>
@@ -155,7 +164,7 @@ function Footer() {
                     className="text-gray-700 transition hover:opacity-75"
                   >
                     {" "}
-                    1on1 Coaching{" "}
+                    Kampaniyalar{" "}
                   </a>
                 </li>
 
@@ -165,7 +174,7 @@ function Footer() {
                     className="text-gray-700 transition hover:opacity-75"
                   >
                     {" "}
-                    Company Review{" "}
+                    Haqqımızda{" "}
                   </a>
                 </li>
 
@@ -175,7 +184,7 @@ function Footer() {
                     className="text-gray-700 transition hover:opacity-75"
                   >
                     {" "}
-                    Accounts Review{" "}
+                    Mağazalarımız{" "}
                   </a>
                 </li>
 
@@ -185,7 +194,7 @@ function Footer() {
                     className="text-gray-700 transition hover:opacity-75"
                   >
                     {" "}
-                    HR Consulting{" "}
+                    Korporativ satış{" "}
                   </a>
                 </li>
 
@@ -195,14 +204,23 @@ function Footer() {
                     className="text-gray-700 transition hover:opacity-75"
                   >
                     {" "}
-                    SEO Optimisation{" "}
+                    Karyera{" "}
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    className="text-gray-700 transition hover:opacity-75"
+                  >
+                    {" "}
+                    Karyera{" "}
                   </a>
                 </li>
               </ul>
             </div>
 
             <div>
-              <p className="font-medium text-gray-900">Company</p>
+              <p className="font-medium text-gray-900">Müştəri üçün</p>
 
               <ul className="mt-6 space-y-4 text-sm">
                 <li>
@@ -211,7 +229,7 @@ function Footer() {
                     className="text-gray-700 transition hover:opacity-75"
                   >
                     {" "}
-                    About{" "}
+                    Ödəniş şərtləri{" "}
                   </a>
                 </li>
 
@@ -221,7 +239,7 @@ function Footer() {
                     className="text-gray-700 transition hover:opacity-75"
                   >
                     {" "}
-                    Meet the Team{" "}
+                    Məxfilik siyasəti{" "}
                   </a>
                 </li>
 
@@ -231,23 +249,7 @@ function Footer() {
                     className="text-gray-700 transition hover:opacity-75"
                   >
                     {" "}
-                    Accounts Review{" "}
-                  </a>
-                </li>
-              </ul>
-            </div>
-
-            <div>
-              <p className="font-medium text-gray-900">Helpful Links</p>
-
-              <ul className="mt-6 space-y-4 text-sm">
-                <li>
-                  <a
-                    href="#"
-                    className="text-gray-700 transition hover:opacity-75"
-                  >
-                    {" "}
-                    Contact{" "}
+                    Çatdırılma{" "}
                   </a>
                 </li>
 
@@ -257,72 +259,35 @@ function Footer() {
                     className="text-gray-700 transition hover:opacity-75"
                   >
                     {" "}
-                    FAQs{" "}
+                    Geri qaytarılma və dəyişdirilmə{" "}
                   </a>
                 </li>
-
                 <li>
                   <a
                     href="#"
                     className="text-gray-700 transition hover:opacity-75"
                   >
                     {" "}
-                    Live Chat{" "}
-                  </a>
-                </li>
-              </ul>
-            </div>
-
-            <div>
-              <p className="font-medium text-gray-900">Legal</p>
-
-              <ul className="mt-6 space-y-4 text-sm">
-                <li>
-                  <a
-                    href="#"
-                    className="text-gray-700 transition hover:opacity-75"
-                  >
-                    {" "}
-                    Accessibility{" "}
-                  </a>
-                </li>
-
-                <li>
-                  <a
-                    href="#"
-                    className="text-gray-700 transition hover:opacity-75"
-                  >
-                    {" "}
-                    Returns Policy{" "}
-                  </a>
-                </li>
-
-                <li>
-                  <a
-                    href="#"
-                    className="text-gray-700 transition hover:opacity-75"
-                  >
-                    {" "}
-                    Refund Policy{" "}
-                  </a>
-                </li>
-
-                <li>
-                  <a
-                    href="#"
-                    className="text-gray-700 transition hover:opacity-75"
-                  >
-                    Hiring-3 Statistics
+                    Tez-tez verilən suallar{" "}
                   </a>
                 </li>
               </ul>
             </div>
           </div>
         </div>
-
-        <p className="text-xs text-gray-500">
-          &copy; 2022. Company Name. All rights reserved.
-        </p>
+        <div className="w-full grid gap-8 lg:grid-cols-3"
+        style={{ paddingTop: "24px",
+          display: "flex",
+          justifyContent: "space-between",
+          alignItems: "center" 
+        }}>
+          <p className="text-sm text-gray-500">
+            &copy; 2019-2025 Superfon. All rights reserved.
+          </p>
+          <p className="text-sm  text-gray-500">
+            Sayt Mina M. tərəfindən hazırlandı.
+          </p>
+        </div>
       </div>
     </footer>
   );
