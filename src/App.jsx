@@ -13,6 +13,7 @@ import { WishlistContext, WishlistProvider } from "./contexts/WishlistContext";
 import { LoginForm } from "./login/LoginForm";
 import ProductDetail from "./cards/ProductDetail";
 import WishlistPage from "./Components/pages/WishlistPage";
+import CheckoutPage from "./Components/pages/CheckoutPage";
 function App() {
   return (
     <WishlistProvider>
@@ -24,14 +25,15 @@ function App() {
           <Routes>
             <Route path="/" element={<Main />} />
             <Route path="/basket" element={<BasketPage />} />
+            <Route path="/checkout" element={<CheckoutPage />} />
             <Route path="/payment" element={<EasyOrder />} />
             <Route path="/login" element={<LoginForm />} />
             <Route path="/product/:id" element={<ProductDetail />} />
             <Route path="*" element={<Error />} />
             <Route path="/wishlist" element={<WishlistPage />} />
           </Routes>
-          <Footer />
         </div>
+        <Footer />
       </BasketProvider>
     </WishlistProvider>
   );

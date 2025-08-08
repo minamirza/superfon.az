@@ -2,37 +2,57 @@ import React, { useEffect, useState } from "react";
 
 function Slider() {
   const slides = [
-    "First slide",
-    "Second slide",
-    "Third slide"
+    "https://cdn.superfon.az/i/h/main/1000/148-033ba667deef68f5f6f2ff57f6210fd2.jpg",
+    "https://cdn.superfon.az/i/h/main/1000/130-84c505d1388bcf495cbb568221cbea07.jpg",
+    "https://cdn.superfon.az/i/h/main/1000/123-31c34c629d9b44e1ec8316c235183462.jpg",
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentIndex(prev => (prev + 1) % slides.length);
-    }, 10000); 
+      setCurrentIndex((prev) => (prev + 1) % slides.length);
+    }, 5000);
 
-    return () => clearInterval(interval); 
+    return () => clearInterval(interval);
   }, [slides.length]);
+
+  const goToSlide = (index) => {
+    setCurrentIndex(index);
+  };
 
   return (
     <div id="auto-play" className="relative w-full">
-      <div className="carousel h-80">
-        <div className="carousel-body h-full" style={{ opacity: 1 }}>
-          {slides.map((text, i) => (
+      <div className="carousel h-[32rem] overflow-hidden">
+        <div className="carousel-body h-full">
+          {slides.map((url, i) => (
             <div
               key={i}
-              className="carousel-slide"
+              className="carousel-slide h-full w-full transition-opacity duration-500"
               style={{ display: i === currentIndex ? "block" : "none" }}
             >
-              <div className={`bg-base-200/60 flex h-full justify-center p-6`}>
-                <span className="self-center text-2xl sm:text-4xl">{text}</span>
-              </div>
+              <img
+                src={url}
+                alt={`Slide ${i + 1}`}
+                className="object-cover w-full h-full rounded"
+              />
             </div>
           ))}
         </div>
+      </div>
+
+{/* bu altindaki xettin kodu istemesen sil avto deyissin */}
+
+      <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex gap-3">
+        {slides.map((_, i) => (
+          <div
+            key={i}
+            onMouseEnter={() => goToSlide(i)}
+            className={`h-1 w-10 rounded transition-all duration-300 cursor-pointer ${
+              i === currentIndex ? "bg-purple-700 w-12" : "bg-gray-300"
+            }`}
+          />
+        ))}
       </div>
     </div>
   );

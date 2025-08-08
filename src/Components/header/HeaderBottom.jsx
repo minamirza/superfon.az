@@ -7,6 +7,7 @@ import { PiScalesFill } from "react-icons/pi";
 import { FaRegHeart } from "react-icons/fa";
 import { BasketContext } from "../../contexts/BasketContext";
 import { WishlistContext } from "../../contexts/WishlistContext"; // Wishlist
+import { FiAlignLeft } from "react-icons/fi";
 
 function HeaderBottom() {
   const { basket } = useContext(BasketContext);
@@ -22,8 +23,9 @@ function HeaderBottom() {
 
       <button
         type="button"
-        className="w-35 h-11 text-base font-semibold rounded bg-purple-900 hover:bg-purple-950 cursor-pointer text-white"
+        className="w-35 h-11 text-base font-semibold rounded bg-purple-900 hover:bg-purple-950 cursor-pointer text-white flex flex-row items-center justify-center gap-3"
       >
+        <FiAlignLeft />
         Kataloq
       </button>
 

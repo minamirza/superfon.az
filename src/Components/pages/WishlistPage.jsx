@@ -28,12 +28,12 @@ export default function WishlistPage() {
   }
 
   return (
-    <div className="max-w-5xl mx-auto p-6">
+    <div className="h-[600px] max-w-5xl mx-auto p-6">
       <h1 className="text-3xl font-bold mb-6">Sevimlilər</h1>
-      <div className="space-y-4">
+      <div className="space-y-4" style={{ paddingBlock: "50px", paddingLeft: "50px" }}>
         {wishlist.map(
           ({ id, title, img, price, discountPrice, description }) => (
-            <div key={id} className="flex items-center gap-4 border-b pb-4">
+            <div key={id} className="flex items-center gap-4 border-b border-b-gray-200 pb-4">
               <Link to={`/product/${id}`}>
                 <img
                   src={img}

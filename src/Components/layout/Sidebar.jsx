@@ -33,9 +33,9 @@ export default function Sidebar() {
   const [activeIndex, setActiveIndex] = useState(null);
 
   return (
-    <div className="flex h-[450px]">
+    <div className="flex h-[32rem]">
       {/* Left sidebar */}
-      <div className="w-[300px] bg-white border rounded-xl border-gray-300 shadow-md flex flex-col">
+      <div className="w-[350px] h-full bg-white border rounded-xl border-gray-300 shadow-md flex flex-col">
         <div className="divide-y divide-gray-200" style={{ height: "450px" }}>
           {menuItems.map((item, index) => (
             <div
@@ -50,12 +50,13 @@ export default function Sidebar() {
               style={{ paddingLeft: "10px", paddingRight: "10px" }}
             >
               <span className="text-lg">{item.icon}</span>
-              <span className="text-sm font-medium flex-1">{item.name}</span>
+              <span className="text-sm flex-1">{item.name}</span>
               {item.submenu && <ChevronRightIcon className="w-4 h-4" />}
             </div>
           ))}
-          <button className="w-full text-sm text-blue-600 py-3 hover:underline"
-          style={{ paddingTop: "10px" }}
+          <button
+            className="w-full text-sm text-blue-600 py-3 hover:underline"
+            style={{ paddingTop: "20px" }}
           >
             Daha çox göster
           </button>
@@ -68,9 +69,8 @@ export default function Sidebar() {
           <div
             onMouseEnter={() => setActiveIndex(activeIndex)}
             onMouseLeave={() => setActiveIndex(null)}
-            className="absolute top-0 left-0 ml-[300px] w-52 h-24 bg-white border border-gray-300 shadow-lg rounded-md p-2 space-y-1"
-style={{paddingBlock: "10px", paddingInline: "10px"}}
-
+            className="absolute top-0 left-0 ml-[300px] w-52 h-24 bg-white border border-gray-300 shadow-lg rounded-md p-2 space-y-1 z-10"
+            style={{ paddingBlock: "10px", paddingInline: "10px" }}
           >
             {menuItems[activeIndex].submenu.map((sub, i) => (
               <div

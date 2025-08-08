@@ -20,7 +20,7 @@ export default function ProductSlider({ title, products }) {
   useEffect(() => {
     const interval = setInterval(() => {
       setStartIndex((prev) => (prev + 4 >= products.length ? 0 : prev + 1));
-    }, 3000);
+    }, 4000);
 
     return () => clearInterval(interval);
   }, [products.length]);
