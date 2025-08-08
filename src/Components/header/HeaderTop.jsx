@@ -7,7 +7,7 @@ import { MdPerson } from "react-icons/md";
 function HeaderTop() {
   return (
     <header
-      className="p-4"
+      className="p-4 border-b border-gray-200"
       style={{ paddingRight: "20px", paddingLeft: "20px" }}
     >
       <div className="container flex justify-between h-16 mx-auto items-center">

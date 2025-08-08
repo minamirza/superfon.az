@@ -4,10 +4,9 @@ import logo from "../../assets/logo.svg";
 
 function Footer() {
   return (
-    <footer
+    <footer className="bg-purple-50"
       style={{
-        paddingTop: "64px",
-        paddingBottom: "32px",
+        paddingBlock: "64px",
         maxWidth: "1550px",
         margin: "0 auto",
         display: "flex",

@@ -68,7 +68,9 @@ export default function Sidebar() {
           <div
             onMouseEnter={() => setActiveIndex(activeIndex)}
             onMouseLeave={() => setActiveIndex(null)}
-            className="absolute top-0 left-0 ml-[300px] w-52 bg-white border border-gray-300 shadow-lg rounded-md p-2 space-y-1"
+            className="absolute top-0 left-0 ml-[300px] w-52 h-24 bg-white border border-gray-300 shadow-lg rounded-md p-2 space-y-1"
+style={{paddingBlock: "10px", paddingInline: "10px"}}
+
           >
             {menuItems[activeIndex].submenu.map((sub, i) => (
               <div

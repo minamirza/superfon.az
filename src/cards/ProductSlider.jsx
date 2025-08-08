@@ -34,7 +34,9 @@ export default function ProductSlider({ title, products }) {
   };
 
   return (
-    <div className="w-full flex justify-around my-4 py-4">
+    <div className="w-full flex justify-around my-4 py-4"
+    style={{ paddingTop: "64px", paddingBottom: "32px" }}
+    >
       <div className="w-full max-w-6xl mx-auto pb-4 mb-10">
         <h2
           className="text-2xl font-bold mt-8 px-6 py-4"
@@ -54,7 +56,7 @@ export default function ProductSlider({ title, products }) {
                 {/* Ürək düyməsi */}
                 <button
                   onClick={(e) => {
-                    e.stopPropagation(); // Card klik eventinin yayılmasını önləyir
+                    e.stopPropagation();
                     handleAddToWishlist({
                       id,
                       title,
