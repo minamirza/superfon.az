@@ -10,7 +10,6 @@ import {
 import { ChevronRightIcon } from "@heroicons/react/20/solid";
 import { FaDesktop } from "react-icons/fa6";
 
-
 const menuItems = [
   {
     name: "Telefon ve planşetler",
@@ -22,30 +21,12 @@ const menuItems = [
     icon: <FaPlug />,
     submenu: ["Smartfonlar", "Düymeli telefonlar", "Planşetler"],
   },
-  {
-    name: "Saatlar",
-    icon: <FaClock />,
-  },
-  {
-    name: "Avtomobil aksesuarları",
-    icon: <FaCar />,
-  },
-  {
-    name: "Audio ve TV aksesuarlar",
-    icon: <FaTv />,
-  },
-  {
-    name: "Komputer Aksesuarları",
-    icon: <FaDesktop />,
-  },
-  {
-    name: "Kiçik meişet teknikası",
-    icon: <FaPlug />,
-  },
-  {
-    name: "Elektron vape",
-    icon: <FaSmoking />,
-  },
+  { name: "Saatlar", icon: <FaClock /> },
+  { name: "Avtomobil aksesuarları", icon: <FaCar /> },
+  { name: "Audio ve TV aksesuarlar", icon: <FaTv /> },
+  { name: "Komputer Aksesuarları", icon: <FaDesktop /> },
+  { name: "Kiçik meişet teknikası", icon: <FaPlug /> },
+  { name: "Elektron vape", icon: <FaSmoking /> },
 ];
 
 export default function Sidebar() {
@@ -54,25 +35,31 @@ export default function Sidebar() {
   return (
     <div className="flex h-[450px]">
       {/* Left sidebar */}
-      <div className="w-[300px] bg-white border rounded-xl border-gray-300 shadow-md flex flex-col justify-around p-5">
-        {menuItems.map((item, index) => (
-          <div
-            key={item.name}
-            onMouseEnter={() => setActiveIndex(index)}
-            onMouseLeave={() => setActiveIndex(null)}
-            className={`relative px-4 py-3 h-30 cursor-pointer flex items-center gap-3 ${
-              activeIndex === index ? "bg-slate-900 text-white" : "hover:bg-gray-100"
-            }`}
+      <div className="w-[300px] bg-white border rounded-xl border-gray-300 shadow-md flex flex-col">
+        <div className="divide-y divide-gray-200" style={{ height: "450px" }}>
+          {menuItems.map((item, index) => (
+            <div
+              key={item.name}
+              onMouseEnter={() => setActiveIndex(index)}
+              onMouseLeave={() => setActiveIndex(null)}
+              className={`h-[50px] relative px-4 py-3 cursor-pointer flex items-center gap-3 transition-colors ${
+                activeIndex === index
+                  ? "bg-slate-900 text-white"
+                  : "hover:bg-gray-100"
+              }`}
+              style={{ paddingLeft: "10px", paddingRight: "10px" }}
+            >
+              <span className="text-lg">{item.icon}</span>
+              <span className="text-sm font-medium flex-1">{item.name}</span>
+              {item.submenu && <ChevronRightIcon className="w-4 h-4" />}
+            </div>
+          ))}
+          <button className="w-full text-sm text-blue-600 py-3 hover:underline"
+          style={{ paddingTop: "10px" }}
           >
-            <span className="text-lg">{item.icon}</span>
-            <span className="text-sm font-medium">{item.name}</span>
-            {item.submenu && <ChevronRightIcon className="w-4 h-4 ml-auto" />}
-          </div>
-        ))}
-
-        <button className="w-full text-sm text-blue-600 mt-4 py-2 hover:underline">
-          Daha çox göster
-        </button>
+            Daha çox göster
+          </button>
+        </div>
       </div>
 
       {/* Right side (submenu) */}
@@ -81,7 +68,7 @@ export default function Sidebar() {
           <div
             onMouseEnter={() => setActiveIndex(activeIndex)}
             onMouseLeave={() => setActiveIndex(null)}
-            className="absolute top-0 left-0 ml-[300px] w-52 h-26 flex flex-col justify-around bg-white border border-gray-300 shadow-lg rounded-md p-2 space-y-1"
+            className="absolute top-0 left-0 ml-[300px] w-52 bg-white border border-gray-300 shadow-lg rounded-md p-2 space-y-1"
           >
             {menuItems[activeIndex].submenu.map((sub, i) => (
               <div

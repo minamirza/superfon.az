@@ -1,4 +1,4 @@
- import React, { useContext } from "react";
+import React, { useContext } from "react";
 import { MdDelete } from "react-icons/md";
 import { CiShoppingBasket } from "react-icons/ci";
 import { BasketContext } from "../contexts/BasketContext";
@@ -16,9 +16,9 @@ function BasketPage() {
   }
 
   return (
-    <div className="min-h-screen p-6 flex items-center justify-center">
+    <div className="min-h-screen flex items-center justify-center px-10">
       {basket.length > 0 ? (
-        <div className="w-full max-w-5xl bg-white rounded-xl shadow-md p-6">
+        <div className="w-full max-w-5xl bg-white rounded-xl shadow-md">
           <h2 className="text-2xl font-bold mb-6 text-gray-800">Səbət</h2>
 
           <div className="space-y-4">
@@ -40,9 +40,9 @@ function BasketPage() {
                     to={`/products/${item.id}`}
                     className="block text-base font-semibold text-gray-800 hover:underline"
                   >
-                    {item.name.length > 30
-                      ? item.name.slice(0, 25) + "..."
-                      : item.name}
+                    {item.title.length > 30
+                      ? item.title.slice(0, 25) + "..."
+                      : item.title}
                   </Link>
                   <p className="text-sm text-gray-500">Miqdar: x{item.count}</p>
                   <p className="text-sm font-medium text-gray-800">
@@ -85,9 +85,7 @@ function BasketPage() {
       ) : (
         <div className="flex flex-col items-center justify-center text-center gap-3">
           <CiShoppingBasket size={56} className="text-gray-400 mb-4" />
-          <p className="text-xl font-medium text-gray-600 mb-6">
-            Səbət boşdur
-          </p>
+          <p className="text-xl font-medium text-gray-600 mb-6">Səbət boşdur</p>
           <Link
             to="/"
             className="px-6 py-3 text-base items-center flex justify-center rounded w-35 h-11 font-semibold bg-purple-900 text-white transition"

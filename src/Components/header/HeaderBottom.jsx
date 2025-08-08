@@ -6,11 +6,11 @@ import { FaBasketShopping } from "react-icons/fa6";
 import { PiScalesFill } from "react-icons/pi";
 import { FaRegHeart } from "react-icons/fa";
 import { BasketContext } from "../../contexts/BasketContext";
-import { WishlistContext } from "../../contexts/WishlistContext"; // Wishlist 
+import { WishlistContext } from "../../contexts/WishlistContext"; // Wishlist
 
 function HeaderBottom() {
   const { basket } = useContext(BasketContext);
-  const { wishlist } = useContext(WishlistContext); // Wishlist 
+  const { wishlist } = useContext(WishlistContext); // Wishlist
 
   return (
     <div className="bottom-bar relative">
@@ -57,7 +57,7 @@ function HeaderBottom() {
         >
           <FaRegHeart size={24} />
           {wishlist.length > 0 && (
-            <span className="absolute -top-1 -right-1 bg-red-500 text-white text-xs px-1 rounded-full">
+            <span className="absolute -top-2 -right-2 flex items-center justify-center min-w-[20px] h-[20px] bg-red-500 text-white text-xs font-bold rounded-full px-1 leading-none">
               {wishlist.length}
             </span>
           )}
@@ -71,7 +71,7 @@ function HeaderBottom() {
           <div className="relative">
             <FaBasketShopping size={24} />
             {basket.length > 0 && (
-              <span className="absolute -top-1 -right-1 bg-red-500 text-white text-xs px-1 rounded-full">
+              <span className="absolute -top-2 -right-2 flex items-center justify-center min-w-[20px] h-[20px] bg-red-500 text-white text-xs font-bold rounded-full px-1 leading-none">
                 {basket.length}
               </span>
             )}

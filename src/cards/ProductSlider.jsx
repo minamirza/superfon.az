@@ -1,11 +1,22 @@
-import { useState, useEffect } from "react";
-import { FaShoppingCart, FaHeart } from "react-icons/fa";
+import React, { useState, useEffect, useContext } from "react";
+import { useNavigate } from "react-router-dom";
+import { BasketContext } from "../../src/contexts/BasketContext";
+import { WishlistContext } from "../contexts/WishlistContext";
 
 export default function ProductSlider({ title, products }) {
   const [startIndex, setStartIndex] = useState(0);
   const visibleProducts = products.slice(startIndex, startIndex + 4);
+  const navigate = useNavigate();
 
-  // slayd dəyiş
+  const { addToBasket } = useContext(BasketContext);
+  const { addToWishlist } = useContext(WishlistContext);
+  const [isWishlisted, setIsWishlisted] = useState({}); // obyekt olaraq hər məhsul üçün status
+
+  const handleAddToWishlist = (product) => {
+    addToWishlist(product);
+    setIsWishlisted((prev) => ({ ...prev, [product.id]: true }));
+  };
+
   useEffect(() => {
     const interval = setInterval(() => {
       setStartIndex((prev) => (prev + 4 >= products.length ? 0 : prev + 1));
@@ -14,15 +25,20 @@ export default function ProductSlider({ title, products }) {
     return () => clearInterval(interval);
   }, [products.length]);
 
+  const handleCardClick = (id) => {
+    navigate(`/product/${id}`);
+  };
+
+  const handleAddToBasket = (product) => {
+    addToBasket(product);
+  };
+
   return (
     <div className="w-full flex justify-around my-4 py-4">
       <div className="w-full max-w-6xl mx-auto pb-4 mb-10">
         <h2
           className="text-2xl font-bold mt-8 px-6 py-4"
-          style={{
-            paddingTop: "64px",
-            paddingBottom: "32px",
-          }}
+          style={{ paddingTop: "64px", paddingBottom: "32px" }}
         >
           {title}
         </h2>
@@ -32,17 +48,32 @@ export default function ProductSlider({ title, products }) {
             ({ id, title, img, price, discountPrice, description }) => (
               <div
                 key={id}
-                className="group relative block overflow-hidden flex-shrink-0 w-72"
+                className="group relative block overflow-hidden flex-shrink-0 w-72 cursor-pointer"
+                onClick={() => handleCardClick(id)}
               >
-                <button className="absolute end-4 top-4 z-10 rounded-full bg-white p-1.5 text-gray-900 transition hover:text-gray-900/75">
+                {/* Ürək düyməsi */}
+                <button
+                  onClick={(e) => {
+                    e.stopPropagation(); // Card klik eventinin yayılmasını önləyir
+                    handleAddToWishlist({
+                      id,
+                      title,
+                      img,
+                      price,
+                      discountPrice,
+                      description,
+                    });
+                  }}
+                  className="absolute end-4 top-4 z-10 rounded-full bg-white p-1.5 text-gray-900 transition hover:text-gray-900/75"
+                >
                   <span className="sr-only">Wishlist</span>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
+                    fill={isWishlisted[id] ? "red" : "none"}
                     viewBox="0 0 24 24"
                     strokeWidth="1.5"
                     stroke="currentColor"
-                    className="size-4"
+                    className="w-6 h-6"
                   >
                     <path
                       strokeLinecap="round"
@@ -52,12 +83,14 @@ export default function ProductSlider({ title, products }) {
                   </svg>
                 </button>
 
+                {/* Şəkil */}
                 <img
                   src={img}
                   alt={title}
                   className="h-64 w-full object-cover transition duration-500 group-hover:scale-105 sm:h-72"
                 />
 
+                {/* Məhsul məlumatları */}
                 <div className="relative border border-gray-100 bg-white p-6">
                   <p className="text-gray-700">
                     {discountPrice} ₼
@@ -70,22 +103,34 @@ export default function ProductSlider({ title, products }) {
                     {title}
                   </h3>
 
-                  <p className="mt-1.5 line-clamp-3 text-gray-700">
+                  <p
+                    className="mt-1.5 line-clamp-3 text-gray-700"
+                    style={{ paddingTop: "8px", paddingBottom: "8px" }}
+                  >
                     {description ||
                       "Lorem ipsum dolor sit amet consectetur adipisicing elit."}
                   </p>
 
-                  <form className="mt-4 flex gap-4">
-                    <button className="block w-full rounded-sm bg-gray-100 px-4 py-3 text-sm font-medium text-gray-900 transition hover:scale-105">
-                      Add to Cart
-                    </button>
-
+                  {/* Səbətə əlavə et düyməsi */}
+                  <form
+                    className="mt-4 flex gap-4"
+                    onClick={(e) => e.stopPropagation()}
+                  >
                     <button
                       type="button"
-                      onClick={() => handleAddToFavorites(product)}
-                      className="block w-[150px] h-10 rounded-sm bg-pink-500 px-4 py-3 text-sm font-medium text-white transition hover:scale-105 flex items-center justify-center gap-2"
+                      onClick={() =>
+                        handleAddToBasket({
+                          id,
+                          title,
+                          img,
+                          price,
+                          discountPrice,
+                          description,
+                        })
+                      }
+                      className="w-28 h-9 text-base font-semibold rounded text-white border-purple-900 bg-purple-900 hover:bg-purple-950 focus:ring-4 focus:outline-none font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2"
                     >
-                      <FaHeart />
+                      <p>Səbətə At</p>
                     </button>
                   </form>
                 </div>

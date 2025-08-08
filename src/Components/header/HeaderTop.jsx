@@ -6,11 +6,18 @@ import { MdPerson } from "react-icons/md";
 
 function HeaderTop() {
   return (
-    <header className="p-4 dark:bg-gray-100 dark:text-gray-800">
+    <header
+      className="p-4"
+      style={{ paddingRight: "20px", paddingLeft: "20px" }}
+    >
       <div className="container flex justify-between h-16 mx-auto items-center">
         <ul className="flex gap-5 items-stretch hidden space-x-3 lg:flex">
-          <Link to="/magazalar">Mağazalarımız</Link>
-          <Link to="/korporativ">Korporativ satış</Link>
+          <Link to="/magazalar" className="hover:underline">
+            Mağazalarımız
+          </Link>
+          <Link to="/korporativ" className="hover:underline">
+            Korporativ satış
+          </Link>
         </ul>
         <div className="flex flex-row items-center md:space-x-4">
           <div className="relative flex flex-row gap-5">
@@ -23,12 +30,12 @@ function HeaderTop() {
               </button>
               {""}
             </Link>
-            <span className="flex items-center gap-2 text-sm text-gray-700">
+            <span className="flex items-center gap-2 text-sm text-gray-700 hover:underline">
               <FaPhoneAlt size={20} />
               +994 51 205 88 88
             </span>
             <span className="flex items-center gap-2 text-sm text-gray-700">
-              <select className="lang-select">
+              <select className="lang-select hover:cursor-pointer">
                 <option value="az">AZ</option>
                 <option value="en">EN</option>
               </select>

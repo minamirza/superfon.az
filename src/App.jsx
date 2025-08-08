@@ -9,13 +9,14 @@ import EasyOrder from "./Components/delivery/EasyOrder";
 import BasketPage from "./basket/BasketPage";
 import { Toaster } from "react-hot-toast";
 import { BasketProvider } from "./contexts/BasketContext";
-import { WishlistProvider } from "./contexts/WishlistContext";
-import { LoginForm } from './login/LoginForm';
-
+import { WishlistContext, WishlistProvider } from "./contexts/WishlistContext";
+import { LoginForm } from "./login/LoginForm";
+import ProductDetail from "./cards/ProductDetail";
+import WishlistPage from "./Components/pages/WishlistPage";
 function App() {
   return (
-    <BasketProvider>
-      <WishlistProvider>
+    <WishlistProvider>
+      <BasketProvider>
         <div className="container mx-auto px-4">
           <Header />
           <Toaster position="top-right" reverseOrder={false} />
@@ -25,12 +26,14 @@ function App() {
             <Route path="/basket" element={<BasketPage />} />
             <Route path="/payment" element={<EasyOrder />} />
             <Route path="/login" element={<LoginForm />} />
+            <Route path="/product/:id" element={<ProductDetail />} />
             <Route path="*" element={<Error />} />
+            <Route path="/wishlist" element={<WishlistPage />} />
           </Routes>
-            <Footer />
-          </div>
-      </WishlistProvider>
-    </BasketProvider>
+          <Footer />
+        </div>
+      </BasketProvider>
+    </WishlistProvider>
   );
 }
 
