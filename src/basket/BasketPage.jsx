@@ -22,7 +22,7 @@ function BasketPage() {
   }
 
   return (
-    <div className="min-h-screen flex items-start justify-between px-6 max-w-screen-md mx-auto mt-6 gap-8"
+    <div className="min-h-screen flex items-start justify-between px-6 max-w-screen-md mx-auto mt-6 gap-8 align-center"
     style={{ paddingTop: "32px", paddingRight: "32px", display: "flex", justifyContent:"space-between"}}
     >
       {basket.length > 0 ? (
@@ -37,7 +37,7 @@ function BasketPage() {
               {basket.map((item) => (
                 <div
                   key={item.id}
-                  className="flex items-center gap-4 border-b pb-4"
+                  className="flex items-center gap-4 pb-4"
                       style={{ paddingTop: "32px", paddingRight: "32px", display: "flex", justifyContent:"space-between"}}
 
                 >
@@ -77,12 +77,12 @@ function BasketPage() {
             </div>
           </div>
 
-          <div className="w-1/2 flex flex-col justify-between border-l pl-8"
+          <div className="w-1/2 flex flex-col justify-between pl-8"
               style={{ paddingLeft: "30px" }}
 
           >
-            <div>
-              <p className="text-lg font-semibold text-gray-800">
+            <div style={{ paddingTop: "8px", paddingBottom: "8px", right: "50px"  }}>
+              <p className="text-lg font-semibold text-gray-800 " style={{ paddingTop: "8px", paddingBottom: "8px", right: "50px" }}>
                 Ümumi məbləğ:
               </p>
               <p className="text-4xl font-bold text-purple-900 mt-2"

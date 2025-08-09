@@ -8,16 +8,17 @@ function CheckoutPage() {
     navigate("/");
   };
   return (
-    <div className="min-h-screen py-10 px-4 flex items-center justify-center">
-      <div className="max-w-3xl w-full p-8 rounded-lg shadow-lg"
-      style={{paddingBlock: "2rem", paddingInline: "1.5rem"}}
+    <div className="min-h-screen py-10 px-4 flex items-center justify-center gap-3">
+      <div
+        className="max-w-3xl w-full p-8 rounded-lg shadow-lg"
+        style={{ paddingBlock: "2rem", paddingInline: "1.5rem" }}
       >
-        <h1 className="text-2xl font-semibold mb-6 text-center">
+        <h1 className="text-2xl font-semibold mb-6 text-center gap-3">
           Sifariş məlumatları
         </h1>
 
         {/* Müştəri məlumatları */}
-        <div className="space-y-4 gap-3">
+        <div className="flex flex-col gap-4">
           <div>
             <label className="block text-sm font-medium mb-1">
               Ad Soyad <span className="text-red-500">*</span>
@@ -26,6 +27,7 @@ function CheckoutPage() {
               type="text"
               className="w-full border border-gray-300 rounded-lg p-3 focus:outline-none focus:border-purple-500"
               placeholder="Adınızı və soyadınızı daxil edin"
+              style={{ paddingBlock: "5px", paddingLeft: "15px" }}
             />
           </div>
 
@@ -35,6 +37,7 @@ function CheckoutPage() {
               type="email"
               className="w-full border border-gray-300 rounded-lg p-3 focus:outline-none focus:border-purple-500"
               placeholder="example@mail.com"
+              style={{ paddingBlock: "5px", paddingLeft: "15px" }}
             />
           </div>
 
@@ -46,6 +49,7 @@ function CheckoutPage() {
               type="tel"
               className="w-full border border-gray-300 rounded-lg p-3 focus:outline-none focus:border-purple-500"
               placeholder="+994 xx xxx xx xx"
+              style={{ paddingBlock: "5px", paddingLeft: "15px" }}
             />
           </div>
         </div>
@@ -55,25 +59,37 @@ function CheckoutPage() {
           <label className="block text-sm font-medium mb-3">
             Çatdırılma üsulu <span className="text-red-500">*</span>
           </label>
-          <div className="space-y-2">
+
+          <div className="flex flex-col gap-2">
             <label className="flex items-center gap-2">
               <input type="radio" name="delivery" className="w-4 h-4" />
               Unvana çatdırılma
             </label>
             <label className="flex items-center gap-2">
-              <input type="radio" name="delivery" className="w-4 h-4" />
+              <input
+                type="radio"
+                name="delivery"
+                className="w-4 h-4"
+                style={{ paddingBlock: "5px", paddingLeft: "15px" }}
+              />
               Mağazadan götürmək
             </label>
           </div>
         </div>
 
         {/* Ünvan məlumatları */}
-        <div className="mt-6 space-y-4">
+        <div className="mt-6 flex flex-col gap-4">
           <div>
-            <label className="block text-sm font-medium mb-1">
+            <label
+              className="block text-sm font-medium mb-1"
+              style={{ paddingBlock: "5px" }}
+            >
               Şəhəri seçin
             </label>
-            <select className="w-full border border-gray-300 rounded-lg p-3 focus:outline-none focus:border-purple-500">
+            <select
+              className="w-full border border-gray-300 rounded-lg p-3 focus:outline-none focus:border-purple-500"
+              style={{ paddingBlock: "5px", paddingLeft: "15px" }}
+            >
               <option value="">Seçin</option>
               <option>Bakı</option>
               <option>Nərimanov</option>
@@ -82,6 +98,7 @@ function CheckoutPage() {
               <option>Xırdalan</option>
             </select>
           </div>
+
           <div>
             <label className="block text-sm font-medium mb-1">
               Ünvan (küçə, bina, blok, mənzil)
@@ -89,6 +106,7 @@ function CheckoutPage() {
             <input
               type="text"
               className="w-full border border-gray-300 rounded-lg p-3 focus:outline-none focus:border-purple-500"
+              style={{ paddingBlock: "5px", paddingLeft: "15px" }}
             />
           </div>
         </div>
@@ -98,7 +116,8 @@ function CheckoutPage() {
           <label className="block text-sm font-medium mb-3">
             Ödəmə üsulu <span className="text-red-500">*</span>
           </label>
-          <div className="space-y-2">
+
+          <div className="flex flex-col gap-2">
             <label className="flex items-center gap-2">
               <input type="radio" name="payment" className="w-4 h-4" />
               Bank kartı ilə nağd ödəniş
@@ -112,7 +131,10 @@ function CheckoutPage() {
 
         <button
           onClick={handleSubmit}
-          className="mt-8 w-full bg-purple-900 text-white py-3 rounded-lg font-medium hover:bg-purple-800 transition"
+          className="mt-12 w-full bg-purple-900 text-white py-3 px-6 rounded-lg font-semibold 
+             shadow-md hover:bg-purple-800 focus:ring-2 focus:ring-purple-500 
+             focus:outline-none transition-all duration-200 active:scale-95"
+          style={{ paddingBlock: "10px" }}
         >
           Sifarişi tamamla
         </button>

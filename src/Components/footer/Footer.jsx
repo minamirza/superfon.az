@@ -273,6 +273,51 @@ function Footer() {
                 </li>
               </ul>
             </div>
+            <div>
+              <p className="font-medium text-gray-900"> Yeniliker </p>
+
+              <ul className="mt-6 space-y-4 text-sm">
+                <li>
+                  <a
+                    href="#"
+                    className="text-gray-700 transition hover:opacity-75"
+                  >
+                    {" "}
+                    Ödəniş şərtləri{" "}
+                  </a>
+                </li>
+
+                <li>
+                  <a
+                    href="#"
+                    className="text-gray-700 transition hover:opacity-75"
+                  >
+                    {" "}
+                    Məxfilik siyasəti{" "}
+                  </a>
+                </li>
+
+                <li>
+                  <a
+                    href="#"
+                    className="text-gray-700 transition hover:opacity-75"
+                  >
+                    {" "}
+                    Çatdırılma{" "}
+                  </a>
+                </li>
+
+                <li>
+                  <a
+                    href="#"
+                    className="text-gray-700 transition hover:opacity-75"
+                  >
+                    {" "}
+                    Geri qaytarılma və dəyişdirilmə{" "}
+                  </a>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
         <div className="w-full grid gap-8 lg:grid-cols-3"

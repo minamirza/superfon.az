@@ -1,11 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./Header.css";
 import { FaPhoneAlt } from "react-icons/fa";
 import { MdPerson } from "react-icons/md";
 
 function HeaderTop() {
+   const [isModalOpen, setIsModalOpen] = useState(false);
   return (
+    
     <header
       className="p-4 border-b border-gray-200"
       style={{ paddingRight: "20px", paddingLeft: "20px" }}
@@ -30,10 +32,14 @@ function HeaderTop() {
               </button>
               {""}
             </Link>
-            <span className="flex items-center gap-2 text-sm text-gray-700 hover:underline">
-              <FaPhoneAlt size={20} />
-              +994 51 205 88 88
-            </span>
+             <button
+                onClick={() => setIsModalOpen(true)}
+                className="flex items-center gap-2 text-sm text-gray-700 hover:underline"
+                style={{ background: "none", border: "none", cursor: "pointer" }}
+              >
+                <FaPhoneAlt size={20} />
+                +994 51 205 88 88
+              </button>
             <span className="flex items-center gap-2 text-sm text-gray-700">
               <select className="lang-select hover:cursor-pointer">
                 <option value="az">AZ</option>

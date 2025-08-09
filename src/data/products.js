@@ -1,7 +1,7 @@
 const products = [
   {
     id: 1,
-    title: "Adapter başlığı Euroacs EU-MQ329 2USB USB 3.4A",
+    title: "Adapter başlığı Euroacs EU-MQ329 2USB USB",
     img: "https://cdn.superfon.az/i/p/500/111140-0b50117196c2660d71ec96cbc7d0c151.jpg",
     price: 7.5,
     discountPrice: 6.38,
