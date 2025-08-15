@@ -207,15 +207,6 @@ function Footer() {
                     Karyera{" "}
                   </a>
                 </li>
-                <li>
-                  <a
-                    href="#"
-                    className="text-gray-700 transition hover:opacity-75"
-                  >
-                    {" "}
-                    Karyera{" "}
-                  </a>
-                </li>
               </ul>
             </div>
 
@@ -274,7 +265,7 @@ function Footer() {
               </ul>
             </div>
             <div>
-              <p className="font-medium text-gray-900"> Yeniliker </p>
+              <p className="font-medium text-gray-900"> Yeniliklər </p>
 
               <ul className="mt-6 space-y-4 text-sm">
                 <li>
@@ -304,16 +295,6 @@ function Footer() {
                   >
                     {" "}
                     Çatdırılma{" "}
-                  </a>
-                </li>
-
-                <li>
-                  <a
-                    href="#"
-                    className="text-gray-700 transition hover:opacity-75"
-                  >
-                    {" "}
-                    Geri qaytarılma və dəyişdirilmə{" "}
                   </a>
                 </li>
               </ul>

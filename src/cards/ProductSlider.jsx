@@ -4,8 +4,23 @@ import { BasketContext } from "../../src/contexts/BasketContext";
 import { WishlistContext } from "../contexts/WishlistContext";
 
 export default function ProductSlider({ title, products }) {
+  const [visibleCount, setVisibleCount] = useState(4);
+
+  useEffect(() => {
+    const updateCount = () => {
+      if (window.innerWidth < 640) setVisibleCount(1);
+      else if (window.innerWidth < 1024) setVisibleCount(2);
+      else if (window.innerWidth < 1280) setVisibleCount(3);
+      else setVisibleCount(4);
+    };
+
+    updateCount();
+    window.addEventListener("resize", updateCount);
+    return () => window.removeEventListener("resize", updateCount);
+  }, []);
+
   const [startIndex, setStartIndex] = useState(0);
-  const visibleProducts = products.slice(startIndex, startIndex + 4);
+  const visibleProducts = products.slice(startIndex, startIndex + visibleCount);
   const navigate = useNavigate();
 
   const { addToBasket } = useContext(BasketContext);
@@ -34,8 +49,9 @@ export default function ProductSlider({ title, products }) {
   };
 
   return (
-    <div className="w-full flex justify-around my-4 py-4"
-    style={{ paddingTop: "64px", paddingBottom: "32px" }}
+    <div
+      className="w-full flex justify-around my-4 py-4"
+      style={{ paddingTop: "64px", paddingBottom: "32px" }}
     >
       <div className="w-full max-w-6xl mx-auto pb-4 mb-10">
         <h2
@@ -45,7 +61,7 @@ export default function ProductSlider({ title, products }) {
           {title}
         </h2>
 
-        <div className="flex gap-6 overflow-hidden justify-around">
+        <div className="flex gap-6 overflow-hidden justify-around flex-wrap md:flex-nowrap md:justify-around">
           {visibleProducts.map(
             ({ id, title, img, price, discountPrice, description }) => (
               <div

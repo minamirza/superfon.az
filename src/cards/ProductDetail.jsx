@@ -48,7 +48,7 @@ export default function ProductDetail() {
 
           <div className="mt-8 text-sm text-gray-500 border-t pt-4">
             <p>Çatdırılma: 3-5 iş günü</p>
-            <p>Qarantiya: 1 il</p>
+            <p>Zəmanət: 1 il</p>
           </div>
         </div>
       </div>
