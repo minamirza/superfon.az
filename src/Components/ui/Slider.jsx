@@ -23,7 +23,7 @@ function Slider() {
 
   return (
     <div id="auto-play" className="relative w-full">
-      <div className="carousel h-[32rem] overflow-hidden">
+      <div className="carousel aspect-[16/9] overflow-hidden rounded">
         <div className="carousel-body h-full">
           {slides.map((url, i) => (
             <div

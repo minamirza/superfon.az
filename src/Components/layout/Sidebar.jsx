@@ -33,7 +33,7 @@ export default function Sidebar() {
   const [activeIndex, setActiveIndex] = useState(null);
 
   return (
-    <div className="flex h-[32rem]">
+    <div className="flex h-full">
       {/* Left sidebar */}
       <div className="w-[350px] h-full bg-white border rounded-xl border-gray-300 shadow-md flex flex-col">
         <div className="divide-y divide-gray-200" style={{ height: "450px" }}>
@@ -56,7 +56,7 @@ export default function Sidebar() {
           ))}
           <button
             className="w-full text-sm text-blue-600 py-3 hover:underline"
-            style={{ paddingTop: "20px" }}
+            style={{ padding: "20px" }}
           >
             Daha çox göster
           </button>

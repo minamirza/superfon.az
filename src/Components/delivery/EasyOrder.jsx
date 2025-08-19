@@ -5,7 +5,7 @@ import { BsBoxArrowInRight } from "react-icons/bs";
 function EasyOrder() {
   return (
     <div
-      className="flex justify-around items-center bg-gray-50 p-8 h-40 my-8"
+      className="flex flex-col md:flex-row justify-around items-center bg-gray-50 p-8 gap-6 my-8"
       style={{
         paddingTop: "64px",
         paddingBottom: "64px",
