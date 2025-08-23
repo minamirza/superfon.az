@@ -21,97 +21,85 @@ function BasketPage() {
     toast.error("Məhsul səbətdən silindi!");
   }
 
+  // Əgər səbət boşdursa
+  if (basket.length === 0) {
+    return (
+      <div className="min-h-screen flex flex-col items-center justify-center px-10">
+        <CiShoppingBasket size={56} className="text-gray-400 mb-4" />
+        <p
+          className="text-xl font-medium text-gray-600 mb-6"
+          style={{ paddingTop: "10px", paddingBottom: "10px" }}
+        >
+          Səbət boşdur
+        </p>
+        <Link
+          to="/"
+          className="px-6 py-3 text-base items-center flex justify-center rounded w-35 h-11 font-semibold bg-purple-900 text-white transition"
+        >
+          Məhsullara bax
+        </Link>
+      </div>
+    );
+  }
+
+  // Əgər səbətdə məhsul varsa
   return (
-    <div className="min-h-screen flex items-start justify-between px-6 max-w-screen-md mx-auto mt-6 gap-8 align-center"
-    style={{ paddingTop: "32px", paddingRight: "32px", display: "flex", justifyContent:"space-between"}}
-    >
-      {basket.length > 0 ? (
-        <>
-          <div className="w-[900px] overflow-y-auto max-h-[75vh]"
-            >
-            <h2 className="text-2xl font-bold mb-6 text-gray-800">Səbət</h2>
-            <div className="space-y-4"
-                style={{ paddingTop: "32px"}}
+    <div className="min-h-screen max-w-5xl mx-auto p-6">
+      <h1 className="text-3xl font-bold mb-6">Səbət</h1>
 
-            >
-              {basket.map((item) => (
-                <div
-                  key={item.id}
-                  className="flex items-center gap-4 pb-4"
-                      style={{ paddingTop: "32px", paddingRight: "32px", display: "flex", justifyContent:"space-between"}}
-
-                >
-                  <Link to={`/products/${item.id}`}>
-                    <img
-                      src={item.img}
-                      alt={item.name}
-                      className="w-20 h-20 object-cover rounded-md"
-                    />
-                  </Link>
-
-                  <div className="flex-1">
-                    <Link
-                      to={`/products/${item.id}`}
-                      className="block text-base font-semibold text-gray-800 hover:underline"
-                    >
-                      {item.title.length > 30
-                        ? item.title.slice(0, 25) + "..."
-                        : item.title}
-                    </Link>
-                    <p className="text-sm text-gray-500">
-                      Miqdar: x{item.count}
-                    </p>
-                    <p className="text-sm font-medium text-gray-800">
-                      {item.price}₼
-                    </p>
-                  </div>
-
-                  <button
-                    onClick={() => deleteItem(item.id)}
-                    className="text-gray-400 hover:text-red-600 transition"
-                  >
-                    <MdDelete size={24} />
-                  </button>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          <div className="w-1/2 flex flex-col justify-between pl-8"
-              style={{ paddingLeft: "30px" }}
-
+      <div className="space-y-4" style={{ paddingBlock: "50px", paddingLeft: "50px" }}>
+        {basket.map((item) => (
+          <div
+            key={item.id}
+            className="flex flex-col sm:flex-row items-center sm:items-start gap-4 border-b border-b-gray-200 py-4"
+            style={{ paddingBottom: "10px", paddingTop: "10px" }}
           >
-            <div style={{ paddingTop: "8px", paddingBottom: "8px", right: "50px"  }}>
-              <p className="text-lg font-semibold text-gray-800 " style={{ paddingTop: "8px", paddingBottom: "8px", right: "50px" }}>
-                Ümumi məbləğ:
-              </p>
-              <p className="text-4xl font-bold text-purple-900 mt-2"
-              style={{ paddingTop: "8px", paddingBottom: "8px" }}
+            <Link to={`/products/${item.id}`}>
+              <img
+                src={item.img}
+                alt={item.title}
+                className="w-24 h-24 object-cover rounded-md border border-gray-300"
+              />
+            </Link>
+
+            <div className="flex-1">
+              <Link
+                to={`/products/${item.id}`}
+                className="block text-base font-semibold text-gray-800 hover:underline"
               >
-                {total.toFixed(2)}₼
-              </p>
+                {item.title.length > 30 ? item.title.slice(0, 25) + "..." : item.title}
+              </Link>
+              <p className="text-sm text-gray-500">Miqdar: x{item.count}</p>
+              <p className="text-sm font-medium text-gray-800">{item.price} ₼</p>
             </div>
 
             <button
-              onClick={handleCheckout}
-              className="mt-8 px-8 py-3 text-lg font-semibold rounded bg-orange-500 hover:bg-orange-600 text-white transition"
+              onClick={() => deleteItem(item.id)}
+              className="text-gray-400 hover:text-red-600 transition"
+              title="Səbətdən sil"
             >
-              Sifarişi rəsmiləşdir
+              <MdDelete size={24} />
             </button>
           </div>
-        </>
-      ) : (
-       <div className="relative flex flex-col items-center justify-center text-center gap-3 w-full" style={{ top: "180px", left: "270px" }}>
-          <CiShoppingBasket size={56} className="text-gray-400 mb-4" />
-          <p className="text-xl font-medium text-gray-600 mb-6">Səbət boşdur</p>
-          <Link
-            to="/"
-            className="px-6 py-3 text-base items-center flex justify-center rounded w-35 h-11 font-semibold bg-purple-900 text-white transition"
+        ))}
+      </div>
+
+      {/* Ümumi məbləğ */}
+      <div className="flex justify-end mt-8">
+        <div className="text-right">
+          <p className="text-lg font-semibold text-gray-800">Ümumi məbləğ:</p>
+          <p className="text-3xl font-bold text-purple-900 mt-2">
+            {total.toFixed(2)}₼
+          </p>
+          <button
+            onClick={handleCheckout}
+            className="mt-6 px-8 py-3 text-lg font-semibold rounded bg-orange-500 hover:bg-orange-600 text-white transition"
+            style={{ paddingRight: "10px", paddingLeft: "10px" }}
           >
-            Məhsullara bax
-          </Link>
+            Sifarişi rəsmiləşdir
+          </button>
         </div>
-      )}
+      </div>
     </div>
   );
 }

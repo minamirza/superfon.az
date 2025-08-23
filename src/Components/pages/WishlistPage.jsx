@@ -28,17 +28,24 @@ export default function WishlistPage() {
   }
 
   return (
-    <div className="h-[600px] max-w-5xl mx-auto p-6">
+    <div className="min-h-screen max-w-5xl mx-auto p-6">
       <h1 className="text-3xl font-bold mb-6">Sevimlilər</h1>
-      <div className="space-y-4" style={{ paddingBlock: "50px", paddingLeft: "50px" }}>
+      <div
+        className="space-y-4"
+        style={{ paddingBlock: "50px", paddingLeft: "50px" }}
+      >
         {wishlist.map(
           ({ id, title, img, price, discountPrice, description }) => (
-            <div key={id} className="flex items-center gap-4 border-b border-b-gray-200 pb-4">
+            <div
+              key={id}
+              className="flex flex-col sm:flex-row items-center sm:items-start gap-4 border-b border-b-gray-200 py-4"
+              style={{ paddingBottom: "10px", paddingTop: "10px" }}
+            >
               <Link to={`/product/${id}`}>
                 <img
                   src={img}
                   alt={title}
-                  className="w-24 h-24 object-cover rounded-md border"
+                  className="w-24 h-24 object-cover rounded-md border border-gray-300"
                 />
               </Link>
 
